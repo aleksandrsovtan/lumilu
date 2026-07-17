@@ -1,0 +1,22 @@
+{
+  "@@locale": "uk",
+  "appTitle": "Lumilu",
+  "homeHeadline": "Готові стати\nсильнішими?",
+  "homeDescription": "Виконайте 5 присідань. Камера розпізнає рухи та порахує кожен повтор.",
+  "startSquats": "Почати присідання",
+  "squatWorkoutTitle": "ПРИСІДАННЯ · 5 ПОВТОРІВ",
+  "kneeAngle": "Кут коліна: {angle}°",
+  "cameraUnavailable": "Камера недоступна",
+  "pressStart": "Натисніть старт",
+  "standFullyInFrame": "Станьте повністю в кадр",
+  "standUp": "Випрямляйтесь",
+  "squatDown": "Присідайте",
+  "standStraight": "Станьте рівно",
+  "achievementTitle": "Чудова робота!",
+  "achievementDescription": "Перші 5 присідань виконано.",
+  "routeNotFound": "Маршрут не знайдено: {route}",
+  "cameraPermissionFailure": "Надайте застосунку доступ до камери.",
+  "motionNotSupportedFailure": "Розпізнавання поз не підтримується на цьому пристрої.",
+  "motionFailure": "Не вдалося запустити розпізнавання рухів.",
+  "unexpectedFailure": "Сталася непередбачена помилка."
+}

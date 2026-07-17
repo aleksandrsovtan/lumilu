@@ -1,0 +1,32 @@
+{
+  "@@locale": "en",
+  "appTitle": "Lumilu",
+  "homeHeadline": "Ready to get\nstronger?",
+  "homeDescription": "Complete 5 squats. The camera recognizes your movements and counts every repetition.",
+  "startSquats": "Start squats",
+  "squatWorkoutTitle": "SQUATS · 5 REPS",
+  "kneeAngle": "Knee angle: {angle}°",
+  "@kneeAngle": {
+    "placeholders": {
+      "angle": {"type": "int"}
+    }
+  },
+  "cameraUnavailable": "Camera unavailable",
+  "pressStart": "Press start",
+  "standFullyInFrame": "Stand fully in the frame",
+  "standUp": "Stand up",
+  "squatDown": "Squat down",
+  "standStraight": "Stand straight",
+  "achievementTitle": "Great job!",
+  "achievementDescription": "Your first 5 squats are complete.",
+  "routeNotFound": "Route not found: {route}",
+  "@routeNotFound": {
+    "placeholders": {
+      "route": {"type": "String"}
+    }
+  },
+  "cameraPermissionFailure": "Allow the app to access the camera.",
+  "motionNotSupportedFailure": "Pose recognition is not supported on this device.",
+  "motionFailure": "Motion recognition could not be started.",
+  "unexpectedFailure": "An unexpected error occurred."
+}

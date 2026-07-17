@@ -1,0 +1,33 @@
+PODS:
+  - Flutter (1.0.0)
+  - lumilu_motion (0.0.1):
+    - Flutter
+    - MediaPipeTasksVision (= 0.10.35)
+  - MediaPipeTasksCommon (0.10.35)
+  - MediaPipeTasksVision (0.10.35):
+    - MediaPipeTasksCommon (= 0.10.35)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - lumilu_motion (from `.symlinks/plugins/lumilu_motion/ios`)
+
+SPEC REPOS:
+  trunk:
+    - MediaPipeTasksCommon
+    - MediaPipeTasksVision
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  lumilu_motion:
+    :path: ".symlinks/plugins/lumilu_motion/ios"
+
+SPEC CHECKSUMS:
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  lumilu_motion: 0a367d56ffea9ddbd8f0b980723d56dc6adc476b
+  MediaPipeTasksCommon: ae27d88c4d185db114a1a768c504f8270dda79b5
+  MediaPipeTasksVision: 1d6c3efa89830a131dbd0dc4fb80dea283fac521
+
+PODFILE CHECKSUM: c11b42517b5b3f047008ba6ad6cf3876176dd41b
+
+COCOAPODS: 1.16.2
