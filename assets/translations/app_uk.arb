@@ -1,6 +1,11 @@
 {
   "@@locale": "uk",
   "appTitle": "Lumilu",
+  "welcomeHeadlineStart": "Починай кожен день у",
+  "welcomeHeadlineMotion": "русі",
+  "welcomeDescription": "Весела зарядка та прості вправи для всієї родини.",
+  "welcomeCta": "Почнімо рухатись",
+  "welcomeFamily": "Створено для кожного у твоїй родині.",
   "homeHeadline": "Готові стати\nсильнішими?",
   "homeDescription": "Виконайте 5 присідань. Камера розпізнає рухи та порахує кожен повтор.",
   "startSquats": "Почати присідання",

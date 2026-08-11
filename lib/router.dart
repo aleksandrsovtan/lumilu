@@ -9,10 +9,12 @@ import 'features/home/presentation/pages/home_screen.dart';
 import 'features/profile/presentation/pages/profile_settings_screen.dart';
 import 'features/squat/infrastructure/motion/lumilu_camera_preview.dart';
 import 'features/squat/presentation/pages/squat_screen.dart';
+import 'features/welcome/presentation/pages/welcome_screen.dart';
 import 'l10n/generated/app_localizations.dart';
 
 abstract final class AppRoutes {
-  static const home = '/';
+  static const welcome = '/';
+  static const home = '/home';
   static const squat = '/squat';
   static const achievement = '/achievement';
   static const profileSettings = '/profile/settings';
@@ -24,8 +26,13 @@ GoRouter createAppRouter({
   SquatRouteBuilder? squatBuilder,
   ThemeController? themeController,
 }) => GoRouter(
-  initialLocation: AppRoutes.home,
+  initialLocation: AppRoutes.welcome,
   routes: [
+    GoRoute(
+      path: AppRoutes.welcome,
+      builder: (context, state) =>
+          WelcomeScreen(onGetStarted: () => context.go(AppRoutes.home)),
+    ),
     GoRoute(
       path: AppRoutes.home,
       builder: (context, state) => HomeScreen(

@@ -104,6 +104,36 @@ abstract class AppLocalizations {
   /// **'Lumilu'**
   String get appTitle;
 
+  /// No description provided for @welcomeHeadlineStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Start every day in'**
+  String get welcomeHeadlineStart;
+
+  /// No description provided for @welcomeHeadlineMotion.
+  ///
+  /// In en, this message translates to:
+  /// **'motion'**
+  String get welcomeHeadlineMotion;
+
+  /// No description provided for @welcomeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fun daily workouts and simple exercises for the whole family.'**
+  String get welcomeDescription;
+
+  /// No description provided for @welcomeCta.
+  ///
+  /// In en, this message translates to:
+  /// **'Let’s move'**
+  String get welcomeCta;
+
+  /// No description provided for @welcomeFamily.
+  ///
+  /// In en, this message translates to:
+  /// **'Made for every body in your family.'**
+  String get welcomeFamily;
+
   /// No description provided for @homeHeadline.
   ///
   /// In en, this message translates to:

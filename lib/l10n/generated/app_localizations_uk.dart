@@ -12,6 +12,22 @@ class AppLocalizationsUk extends AppLocalizations {
   String get appTitle => 'Lumilu';
 
   @override
+  String get welcomeHeadlineStart => 'Починай кожен день у';
+
+  @override
+  String get welcomeHeadlineMotion => 'русі';
+
+  @override
+  String get welcomeDescription =>
+      'Весела зарядка та прості вправи для всієї родини.';
+
+  @override
+  String get welcomeCta => 'Почнімо рухатись';
+
+  @override
+  String get welcomeFamily => 'Створено для кожного у твоїй родині.';
+
+  @override
   String get homeHeadline => 'Готові стати\nсильнішими?';
 
   @override

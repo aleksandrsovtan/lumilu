@@ -104,7 +104,7 @@ class SplashScreen extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     LumiluColors.neutral50,
-                    Color(0xFFF3F1F8),
+                    LumiluColors.lilac50,
                     LumiluColors.neutral100,
                   ],
                   stops: [0, 0.52, 1],
@@ -170,7 +170,7 @@ class SplashScreen extends StatelessWidget {
                           child: ConstrainedBox(
                             constraints: const BoxConstraints(maxWidth: 260),
                             child: Image.asset(
-                              'assets/icons/lumilu.png',
+                              'assets/icons/lumilu.webp',
                               fit: BoxFit.contain,
                             ),
                           ),

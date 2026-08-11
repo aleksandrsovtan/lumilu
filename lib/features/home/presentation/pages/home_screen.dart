@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+
+import '../../../../core/theme/lumilu_theme.dart';
 import '../../../../l10n/generated/app_localizations.dart';
+import '../../../../shared/presentation/widgets/lumilu_button.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({required this.onStartSquats, required this.onOpenProfile, super.key});
+  const HomeScreen({
+    required this.onStartSquats,
+    required this.onOpenProfile,
+    super.key,
+  });
 
   final VoidCallback onStartSquats;
   final VoidCallback onOpenProfile;
@@ -11,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         actions: [
           IconButton(
@@ -29,17 +37,50 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Spacer(),
-              Icon(Icons.fitness_center_rounded, size: 72, color: Theme.of(context).colorScheme.secondary),
+              Center(
+                child: Container(
+                  width: 112,
+                  height: 112,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? LumiluColors.twilight700
+                        : LumiluColors.mint50,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.fitness_center_rounded,
+                    size: 58,
+                    color: LumiluColors.mint400,
+                  ),
+                ),
+              ),
               const SizedBox(height: 34),
-              Text(l10n.homeHeadline, textAlign: TextAlign.center, style: Theme.of(context).textTheme.displaySmall),
+              Text(
+                l10n.homeHeadline,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? LumiluColors.neutral0
+                      : LumiluColors.twilight800,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
               const SizedBox(height: 14),
-              Text(l10n.homeDescription, textAlign: TextAlign.center),
+              Text(
+                l10n.homeDescription,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? LumiluColors.twilight300
+                      : LumiluColors.neutral600,
+                  height: 1.4,
+                ),
+              ),
               const Spacer(),
-              FilledButton.icon(
+              LumiluButton(
                 key: const Key('start-squats'),
                 onPressed: onStartSquats,
-                icon: const Icon(Icons.play_arrow_rounded),
-                label: Text(l10n.startSquats),
+                label: l10n.startSquats,
               ),
             ],
           ),

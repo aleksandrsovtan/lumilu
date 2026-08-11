@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/theme/lumilu_theme.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 
 class AchievementScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class AchievementScreen extends StatelessWidget {
             const Icon(
               Icons.emoji_events_rounded,
               size: 96,
-              color: Color(0xffffd166),
+              color: LumiluColors.yellow600,
             ),
             const SizedBox(height: 24),
             Text(

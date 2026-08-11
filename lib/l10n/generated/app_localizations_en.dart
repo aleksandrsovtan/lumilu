@@ -12,6 +12,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appTitle => 'Lumilu';
 
   @override
+  String get welcomeHeadlineStart => 'Start every day in';
+
+  @override
+  String get welcomeHeadlineMotion => 'motion';
+
+  @override
+  String get welcomeDescription =>
+      'Fun daily workouts and simple exercises for the whole family.';
+
+  @override
+  String get welcomeCta => 'Let’s move';
+
+  @override
+  String get welcomeFamily => 'Made for every body in your family.';
+
+  @override
   String get homeHeadline => 'Ready to get\nstronger?';
 
   @override

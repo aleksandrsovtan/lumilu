@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/theme/lumilu_theme.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../../../shared/presentation/extensions/app_failure_l10n.dart';
 import '../../domain/entities/pose_frame_entity.dart';
@@ -192,7 +193,7 @@ class _SkeletonPainter extends CustomPainter {
     final points = frame?.landmarks ?? const <PosePoint>[];
     if (points.length != 33) return;
     final paint = Paint()
-      ..color = const Color(0xff70e000)
+      ..color = LumiluColors.green500
       ..strokeWidth = 4
       ..strokeCap = StrokeCap.round;
     Offset point(int index) =>

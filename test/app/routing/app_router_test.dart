@@ -5,7 +5,9 @@ import 'package:lumilu/l10n/generated/app_localizations.dart';
 import 'package:lumilu/router.dart';
 
 void main() {
-  testWidgets('completes the Home → Squat → Achievement flow', (tester) async {
+  testWidgets('completes the Welcome → Home → Squat → Achievement flow', (
+    tester,
+  ) async {
     final router = createAppRouter(
       squatBuilder: (context) => Scaffold(
         body: Center(
@@ -27,7 +29,15 @@ void main() {
         supportedLocales: AppLocalizations.supportedLocales,
       ),
     );
+    expect(find.byKey(const Key('welcome-headline')), findsOneWidget);
+    expect(find.text('Почнімо рухатись'), findsOneWidget);
+    expect(router.state.uri.path, AppRoutes.welcome);
+
+    await tester.ensureVisible(find.byKey(const Key('welcome-get-started')));
+    await tester.tap(find.byKey(const Key('welcome-get-started')));
+    await tester.pumpAndSettle();
     expect(find.text('Готові стати\nсильнішими?'), findsOneWidget);
+    expect(router.state.uri.path, AppRoutes.home);
 
     await tester.tap(find.byKey(const Key('start-squats')));
     await tester.pumpAndSettle();

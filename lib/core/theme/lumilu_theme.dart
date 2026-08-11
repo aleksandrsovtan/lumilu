@@ -7,9 +7,13 @@ abstract final class LumiluColors {
   static const twilight600 = Color(0xFF49416F);
   static const twilight400 = Color(0xFF857CB3);
   static const twilight300 = Color(0xFFAEA7D1);
+  static const yellow600 = Color(0xFFFFD166);
   static const yellow500 = Color(0xFFFFD452);
   static const yellow400 = Color(0xFFFFE47A);
+  static const mint50 = Color(0xFFF0FCFA);
   static const mint400 = Color(0xFF7DE0D1);
+  static const green500 = Color(0xFF70E000);
+  static const lilac50 = Color(0xFFF3F1F8);
   static const lilac400 = Color(0xFFB7B2FF);
   static const lilac500 = Color(0xFF958DEC);
   static const lilac600 = Color(0xFF756ACF);
@@ -26,7 +30,7 @@ abstract final class LumiluColors {
 abstract final class LumiluTheme {
   static ThemeData get light => _build(
     brightness: Brightness.light,
-    canvas: LumiluColors.neutral100,
+    canvas: LumiluColors.neutral300,
     surface: LumiluColors.neutral0,
     surfaceContainer: LumiluColors.neutral50,
     primary: LumiluColors.twilight800,
@@ -79,7 +83,7 @@ abstract final class LumiluTheme {
       secondary: secondary,
       onSecondary: onSecondary,
       secondaryContainer: brightness == Brightness.light
-          ? const Color(0xFFF0FCFA)
+          ? LumiluColors.mint50
           : LumiluColors.twilight700,
       onSecondaryContainer: onSurface,
       tertiary: LumiluColors.lilac400,

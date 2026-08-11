@@ -1,6 +1,11 @@
 {
   "@@locale": "en",
   "appTitle": "Lumilu",
+  "welcomeHeadlineStart": "Start every day in",
+  "welcomeHeadlineMotion": "motion",
+  "welcomeDescription": "Fun daily workouts and simple exercises for the whole family.",
+  "welcomeCta": "Let’s move",
+  "welcomeFamily": "Made for every body in your family.",
   "homeHeadline": "Ready to get\nstronger?",
   "homeDescription": "Complete 5 squats. The camera recognizes your movements and counts every repetition.",
   "startSquats": "Start squats",
