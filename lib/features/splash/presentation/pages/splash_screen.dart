@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/lumilu_theme.dart';
 
@@ -156,7 +155,7 @@ class SplashScreen extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(10),
                               child: Image.asset(
-                                'assets/icons/app_icon.png',
+                                'assets/icons/logo.png',
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -166,7 +165,16 @@ class SplashScreen extends StatelessWidget {
                       const SizedBox(height: 28),
                       Opacity(
                         opacity: titleOpacity,
-                        child: _LumiluWordmark(isDark: isDark),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 32),
+                          child: ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 260),
+                            child: Image.asset(
+                              'assets/icons/lumilu.png',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -178,58 +186,6 @@ class SplashScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-class _LumiluWordmark extends StatelessWidget {
-  const _LumiluWordmark({required this.isDark});
-
-  final bool isDark;
-
-  static const _letters = [
-    ('L', LumiluColors.yellow400),
-    ('U', LumiluColors.yellow500),
-    ('M', LumiluColors.mint400),
-    ('I', LumiluColors.mint400),
-    ('L', LumiluColors.lilac400),
-    ('U', LumiluColors.lilac500),
-  ];
-
-  @override
-  Widget build(BuildContext context) => Row(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      for (final (letter, color) in _letters)
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 3),
-          child: Text(
-            letter,
-            style: GoogleFonts.nunito(
-              color: color,
-              fontSize: 40,
-              fontWeight: FontWeight.w700,
-              height: 1,
-              letterSpacing: 0.5,
-              decoration: TextDecoration.none,
-              shadows: [
-                Shadow(
-                  color: color.withValues(alpha: isDark ? 0.38 : 0.18),
-                  blurRadius: isDark ? 16 : 8,
-                ),
-                Shadow(
-                  color:
-                      (isDark
-                              ? LumiluColors.neutral0
-                              : LumiluColors.twilight700)
-                          .withValues(alpha: isDark ? 0.28 : 0.12),
-                  offset: const Offset(0, 1),
-                  blurRadius: isDark ? 2 : 3,
-                ),
-              ],
-            ),
-          ),
-        ),
-    ],
-  );
 }
 
 class _TwinklePainter extends CustomPainter {
