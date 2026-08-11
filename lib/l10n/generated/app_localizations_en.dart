@@ -22,6 +22,24 @@ class AppLocalizationsEn extends AppLocalizations {
   String get startSquats => 'Start squats';
 
   @override
+  String get profileSettingsTitle => 'Profile settings';
+
+  @override
+  String get appearanceTitle => 'Appearance';
+
+  @override
+  String get themeSystem => 'System';
+
+  @override
+  String get themeSystemDescription => 'Match your device settings';
+
+  @override
+  String get themeLight => 'Light';
+
+  @override
+  String get themeDark => 'Dark';
+
+  @override
   String get squatWorkoutTitle => 'SQUATS · 5 REPS';
 
   @override

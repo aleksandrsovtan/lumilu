@@ -22,6 +22,24 @@ class AppLocalizationsUk extends AppLocalizations {
   String get startSquats => 'Почати присідання';
 
   @override
+  String get profileSettingsTitle => 'Налаштування профілю';
+
+  @override
+  String get appearanceTitle => 'Вигляд';
+
+  @override
+  String get themeSystem => 'Системна';
+
+  @override
+  String get themeSystemDescription => 'Відповідно до налаштувань пристрою';
+
+  @override
+  String get themeLight => 'Світла';
+
+  @override
+  String get themeDark => 'Темна';
+
+  @override
   String get squatWorkoutTitle => 'ПРИСІДАННЯ · 5 ПОВТОРІВ';
 
   @override

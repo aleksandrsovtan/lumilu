@@ -1,5 +1,5 @@
 name: lumilu
-description: "Move, play, and grow together. Lumilu is an app for children that turns physical activity into fun daily challenges, levels, and family missions."
+description: "Move together. Feel better every day."
 
 publish_to: 'none'
 
@@ -19,6 +19,8 @@ dependencies:
   equatable: ^2.1.0
   go_router: ^17.2.3
   flutter_bloc: ^9.1.1
+  google_fonts: ^6.3.2
+  shared_preferences: ^2.5.3
 
   lumilu_motion:
     git:

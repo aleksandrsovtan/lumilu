@@ -122,6 +122,42 @@ abstract class AppLocalizations {
   /// **'Start squats'**
   String get startSquats;
 
+  /// No description provided for @profileSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile settings'**
+  String get profileSettingsTitle;
+
+  /// No description provided for @appearanceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get appearanceTitle;
+
+  /// No description provided for @themeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get themeSystem;
+
+  /// No description provided for @themeSystemDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Match your device settings'**
+  String get themeSystemDescription;
+
+  /// No description provided for @themeLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get themeLight;
+
+  /// No description provided for @themeDark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get themeDark;
+
   /// No description provided for @squatWorkoutTitle.
   ///
   /// In en, this message translates to:

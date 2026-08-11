@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'core/di/injection_container.dart';
 import 'core/di/modules/squat_module.dart';
+import 'core/theme/theme_controller.dart';
 import 'features/achievement/presentation/pages/achievement_screen.dart';
 import 'features/home/presentation/pages/home_screen.dart';
+import 'features/profile/presentation/pages/profile_settings_screen.dart';
 import 'features/squat/infrastructure/motion/lumilu_camera_preview.dart';
 import 'features/squat/presentation/pages/squat_screen.dart';
 import 'l10n/generated/app_localizations.dart';
@@ -13,17 +15,23 @@ abstract final class AppRoutes {
   static const home = '/';
   static const squat = '/squat';
   static const achievement = '/achievement';
+  static const profileSettings = '/profile/settings';
 }
 
 typedef SquatRouteBuilder = Widget Function(BuildContext context);
 
-GoRouter createAppRouter({SquatRouteBuilder? squatBuilder}) => GoRouter(
+GoRouter createAppRouter({
+  SquatRouteBuilder? squatBuilder,
+  ThemeController? themeController,
+}) => GoRouter(
   initialLocation: AppRoutes.home,
   routes: [
     GoRoute(
       path: AppRoutes.home,
-      builder: (context, state) =>
-          HomeScreen(onStartSquats: () => context.push(AppRoutes.squat)),
+      builder: (context, state) => HomeScreen(
+        onStartSquats: () => context.push(AppRoutes.squat),
+        onOpenProfile: () => context.push(AppRoutes.profileSettings),
+      ),
     ),
     GoRoute(
       path: AppRoutes.squat,
@@ -34,6 +42,12 @@ GoRouter createAppRouter({SquatRouteBuilder? squatBuilder}) => GoRouter(
       path: AppRoutes.achievement,
       builder: (context, state) => const AchievementScreen(),
     ),
+    if (themeController != null)
+      GoRoute(
+        path: AppRoutes.profileSettings,
+        builder: (context, state) =>
+            ProfileSettingsScreen(themeController: themeController),
+      ),
   ],
   errorBuilder: (context, state) => Directionality(
     textDirection: TextDirection.ltr,
@@ -56,5 +70,3 @@ Widget _buildSquatRoute(BuildContext context) {
     ),
   );
 }
-
-final GoRouter appRouter = createAppRouter();

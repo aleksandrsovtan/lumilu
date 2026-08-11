@@ -4,6 +4,12 @@
   "homeHeadline": "Ready to get\nstronger?",
   "homeDescription": "Complete 5 squats. The camera recognizes your movements and counts every repetition.",
   "startSquats": "Start squats",
+  "profileSettingsTitle": "Profile settings",
+  "appearanceTitle": "Appearance",
+  "themeSystem": "System",
+  "themeSystemDescription": "Match your device settings",
+  "themeLight": "Light",
+  "themeDark": "Dark",
   "squatWorkoutTitle": "SQUATS · 5 REPS",
   "kneeAngle": "Knee angle: {angle}°",
   "@kneeAngle": {
