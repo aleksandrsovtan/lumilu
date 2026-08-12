@@ -5,7 +5,7 @@ import 'package:lumilu/l10n/generated/app_localizations.dart';
 import 'package:lumilu/router.dart';
 
 void main() {
-  testWidgets('completes the Welcome → Home → Squat → Achievement flow', (
+  testWidgets('opens onboarding routes and completes the workout flow', (
     tester,
   ) async {
     final router = createAppRouter(
@@ -33,8 +33,28 @@ void main() {
     expect(find.text('Почнімо рухатись'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.welcome);
 
+    await tester.tap(find.byKey(const Key('welcome-sign-in')));
+    await tester.pumpAndSettle();
+    expect(find.text('Вхід'), findsOneWidget);
+    expect(router.state.uri.path, AppRoutes.signIn);
+
+    router.go(AppRoutes.welcome);
+    await tester.pumpAndSettle();
     await tester.ensureVisible(find.byKey(const Key('welcome-get-started')));
     await tester.tap(find.byKey(const Key('welcome-get-started')));
+    await tester.pumpAndSettle();
+    expect(find.text('Швидка реєстрація'), findsOneWidget);
+    expect(router.state.uri.path, AppRoutes.quickRegistration);
+
+    router.go(AppRoutes.createProfile);
+    await tester.pumpAndSettle();
+    expect(find.text('Створення профілю'), findsOneWidget);
+
+    router.go(AppRoutes.firstWorkout);
+    await tester.pumpAndSettle();
+    expect(find.text('Перша зарядка'), findsOneWidget);
+
+    router.go(AppRoutes.home);
     await tester.pumpAndSettle();
     expect(find.text('Готові стати\nсильнішими?'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.home);

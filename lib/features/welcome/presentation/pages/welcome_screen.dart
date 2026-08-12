@@ -7,9 +7,14 @@ import '../../../../l10n/generated/app_localizations.dart';
 import '../../../../shared/presentation/widgets/lumilu_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({required this.onGetStarted, super.key});
+  const WelcomeScreen({
+    required this.onGetStarted,
+    required this.onSignIn,
+    super.key,
+  });
 
   final VoidCallback onGetStarted;
+  final VoidCallback onSignIn;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -17,9 +22,15 @@ class WelcomeScreen extends StatelessWidget {
       fit: StackFit.expand,
       children: [
         ColoredBox(
-          color: Theme.of(context).brightness == Brightness.dark ? LumiluColors.twilight900 : LumiluColors.neutral200,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? LumiluColors.twilight900
+              : LumiluColors.neutral200,
         ),
-        Image.asset('assets/images/welcome_background.webp', fit: BoxFit.cover, alignment: Alignment.topCenter),
+        Image.asset(
+          'assets/images/welcome_background.webp',
+          fit: BoxFit.cover,
+          alignment: Alignment.topCenter,
+        ),
         const IgnorePointer(child: CustomPaint(painter: _GrainPainter())),
         SafeArea(
           child: LayoutBuilder(
@@ -27,19 +38,28 @@ class WelcomeScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(24, 10, 24, 24),
               child: Center(
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight - 42, maxWidth: 560),
+                  constraints: BoxConstraints(
+                    minHeight: constraints.maxHeight - 42,
+                    maxWidth: 560,
+                  ),
                   child: IntrinsicHeight(
                     child: Column(
                       children: [
                         SizedBox(
                           width: 290,
                           height: 84,
-                          child: Image.asset('assets/icons/lumilu.webp', fit: BoxFit.cover),
+                          child: Image.asset(
+                            'assets/icons/lumilu.webp',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                         const SizedBox(height: 2),
                         SizedBox(
                           height: constraints.maxHeight < 700 ? 225 : 305,
-                          child: Image.asset('assets/images/lumi.webp', fit: BoxFit.contain),
+                          child: Image.asset(
+                            'assets/images/lumi.webp',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                         const SizedBox(height: 4),
                         Semantics(
@@ -48,24 +68,34 @@ class WelcomeScreen extends StatelessWidget {
                             key: const Key('welcome-headline'),
                             TextSpan(
                               children: [
-                                TextSpan(text: '${AppLocalizations.of(context)!.welcomeHeadlineStart}\n'),
+                                TextSpan(
+                                  text:
+                                      '${AppLocalizations.of(context)!.welcomeHeadlineStart}\n',
+                                ),
                                 WidgetSpan(
                                   alignment: PlaceholderAlignment.baseline,
                                   baseline: TextBaseline.alphabetic,
-                                  child: _GradientText(AppLocalizations.of(context)!.welcomeHeadlineMotion),
+                                  child: _GradientText(
+                                    AppLocalizations.of(
+                                      context,
+                                    )!.welcomeHeadlineMotion,
+                                  ),
                                 ),
                               ],
                             ),
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                              fontSize: 31,
-                              color: Theme.of(context).brightness == Brightness.dark
-                                  ? LumiluColors.neutral0
-                                  : LumiluColors.twilight800,
-                              fontWeight: FontWeight.w700,
-                              height: 1.06,
-                              letterSpacing: -1.1,
-                            ),
+                            style: Theme.of(context).textTheme.displaySmall
+                                ?.copyWith(
+                                  fontSize: 31,
+                                  color:
+                                      Theme.of(context).brightness ==
+                                          Brightness.dark
+                                      ? LumiluColors.neutral0
+                                      : LumiluColors.twilight800,
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.06,
+                                  letterSpacing: -1.1,
+                                ),
                           ),
                         ),
                         const SizedBox(height: 12),
@@ -74,12 +104,15 @@ class WelcomeScreen extends StatelessWidget {
                           child: Text(
                             AppLocalizations.of(context)!.welcomeDescription,
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Theme.of(context).brightness == Brightness.dark
-                                  ? LumiluColors.twilight300
-                                  : LumiluColors.neutral600,
-                              height: 1.38,
-                            ),
+                            style: Theme.of(context).textTheme.bodyMedium
+                                ?.copyWith(
+                                  color:
+                                      Theme.of(context).brightness ==
+                                          Brightness.dark
+                                      ? LumiluColors.twilight300
+                                      : LumiluColors.neutral600,
+                                  height: 1.38,
+                                ),
                           ),
                         ),
                         const Spacer(),
@@ -89,23 +122,47 @@ class WelcomeScreen extends StatelessWidget {
                           onPressed: onGetStarted,
                         ),
                         const SizedBox(height: 18),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                AppLocalizations.of(context)!.welcomeFamily,
-                                textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                  color: Theme.of(context).brightness == Brightness.dark
-                                      ? LumiluColors.twilight300
-                                      : LumiluColors.neutral600,
+                        Semantics(
+                          button: true,
+                          child: InkWell(
+                            key: const Key('welcome-sign-in'),
+                            onTap: onSignIn,
+                            borderRadius: BorderRadius.circular(12),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 6,
+                              ),
+                              child: Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text:
+                                          '${AppLocalizations.of(context)!.welcomeHaveAccount} ',
+                                    ),
+                                    TextSpan(
+                                      text: AppLocalizations.of(
+                                        context,
+                                      )!.welcomeSignIn,
+                                      style: const TextStyle(
+                                        color: LumiluColors.mint400,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ],
                                 ),
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context).textTheme.bodyMedium
+                                    ?.copyWith(
+                                      color:
+                                          Theme.of(context).brightness ==
+                                              Brightness.dark
+                                          ? LumiluColors.twilight300
+                                          : LumiluColors.neutral600,
+                                    ),
                               ),
                             ),
-                            const SizedBox(width: 7),
-                            const Icon(Icons.favorite_border_rounded, size: 22, color: LumiluColors.mint400),
-                          ],
+                          ),
                         ),
                       ],
                     ),
@@ -129,13 +186,20 @@ class _GradientText extends StatelessWidget {
   Widget build(BuildContext context) => ShaderMask(
     blendMode: BlendMode.srcIn,
     shaderCallback: (bounds) => const LinearGradient(
-      colors: [LumiluColors.yellow500, LumiluColors.mint400, LumiluColors.lilac500],
+      colors: [
+        LumiluColors.yellow500,
+        LumiluColors.mint400,
+        LumiluColors.lilac500,
+      ],
     ).createShader(bounds),
     child: Text(
       text,
-      style: Theme.of(
-        context,
-      ).textTheme.displaySmall?.copyWith(fontSize: 31, fontWeight: FontWeight.w700, height: 1.06, letterSpacing: -1.1),
+      style: Theme.of(context).textTheme.displaySmall?.copyWith(
+        fontSize: 31,
+        fontWeight: FontWeight.w700,
+        height: 1.06,
+        letterSpacing: -1.1,
+      ),
     ),
   );
 }
@@ -147,11 +211,15 @@ class _GrainPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final random = math.Random(42);
     final light = Paint()..color = Colors.white.withValues(alpha: 0.07);
-    final dark = Paint()..color = LumiluColors.twilight900.withValues(alpha: 0.045);
+    final dark = Paint()
+      ..color = LumiluColors.twilight900.withValues(alpha: 0.045);
     final count = (size.width * size.height / 430).round();
 
     for (var index = 0; index < count; index++) {
-      final point = Offset(random.nextDouble() * size.width, random.nextDouble() * size.height);
+      final point = Offset(
+        random.nextDouble() * size.width,
+        random.nextDouble() * size.height,
+      );
       final radius = 0.25 + random.nextDouble() * 0.55;
       canvas.drawCircle(point, radius, index.isEven ? light : dark);
     }

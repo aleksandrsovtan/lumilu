@@ -25,7 +25,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get welcomeCta => 'Let’s move';
 
   @override
-  String get welcomeFamily => 'Made for every body in your family.';
+  String get welcomeHaveAccount => 'Already have an account?';
+
+  @override
+  String get welcomeSignIn => 'Sign in';
+
+  @override
+  String get signInTitle => 'Sign in';
+
+  @override
+  String get quickRegistrationTitle => 'Quick registration';
+
+  @override
+  String get createProfileTitle => 'Create profile';
+
+  @override
+  String get firstWorkoutTitle => 'First workout';
 
   @override
   String get homeHeadline => 'Ready to get\nstronger?';

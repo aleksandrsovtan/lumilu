@@ -128,11 +128,41 @@ abstract class AppLocalizations {
   /// **'Let’s move'**
   String get welcomeCta;
 
-  /// No description provided for @welcomeFamily.
+  /// No description provided for @welcomeHaveAccount.
   ///
   /// In en, this message translates to:
-  /// **'Made for every body in your family.'**
-  String get welcomeFamily;
+  /// **'Already have an account?'**
+  String get welcomeHaveAccount;
+
+  /// No description provided for @welcomeSignIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get welcomeSignIn;
+
+  /// No description provided for @signInTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get signInTitle;
+
+  /// No description provided for @quickRegistrationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick registration'**
+  String get quickRegistrationTitle;
+
+  /// No description provided for @createProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create profile'**
+  String get createProfileTitle;
+
+  /// No description provided for @firstWorkoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'First workout'**
+  String get firstWorkoutTitle;
 
   /// No description provided for @homeHeadline.
   ///

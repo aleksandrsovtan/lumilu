@@ -11,10 +11,15 @@ import 'features/squat/infrastructure/motion/lumilu_camera_preview.dart';
 import 'features/squat/presentation/pages/squat_screen.dart';
 import 'features/welcome/presentation/pages/welcome_screen.dart';
 import 'l10n/generated/app_localizations.dart';
+import 'shared/presentation/pages/title_screen.dart';
 
 abstract final class AppRoutes {
   static const welcome = '/';
   static const home = '/home';
+  static const signIn = '/sign-in';
+  static const quickRegistration = '/quick-registration';
+  static const createProfile = '/create-profile';
+  static const firstWorkout = '/first-workout';
   static const squat = '/squat';
   static const achievement = '/achievement';
   static const profileSettings = '/profile/settings';
@@ -30,8 +35,31 @@ GoRouter createAppRouter({
   routes: [
     GoRoute(
       path: AppRoutes.welcome,
+      builder: (context, state) => WelcomeScreen(
+        onGetStarted: () => context.push(AppRoutes.quickRegistration),
+        onSignIn: () => context.push(AppRoutes.signIn),
+      ),
+    ),
+    GoRoute(
+      path: AppRoutes.signIn,
       builder: (context, state) =>
-          WelcomeScreen(onGetStarted: () => context.go(AppRoutes.home)),
+          TitleScreen(title: AppLocalizations.of(context)!.signInTitle),
+    ),
+    GoRoute(
+      path: AppRoutes.quickRegistration,
+      builder: (context, state) => TitleScreen(
+        title: AppLocalizations.of(context)!.quickRegistrationTitle,
+      ),
+    ),
+    GoRoute(
+      path: AppRoutes.createProfile,
+      builder: (context, state) =>
+          TitleScreen(title: AppLocalizations.of(context)!.createProfileTitle),
+    ),
+    GoRoute(
+      path: AppRoutes.firstWorkout,
+      builder: (context, state) =>
+          TitleScreen(title: AppLocalizations.of(context)!.firstWorkoutTitle),
     ),
     GoRoute(
       path: AppRoutes.home,

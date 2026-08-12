@@ -25,7 +25,22 @@ class AppLocalizationsUk extends AppLocalizations {
   String get welcomeCta => 'Почнімо рухатись';
 
   @override
-  String get welcomeFamily => 'Створено для кожного у твоїй родині.';
+  String get welcomeHaveAccount => 'Вже маєте акаунт?';
+
+  @override
+  String get welcomeSignIn => 'Увійти';
+
+  @override
+  String get signInTitle => 'Вхід';
+
+  @override
+  String get quickRegistrationTitle => 'Швидка реєстрація';
+
+  @override
+  String get createProfileTitle => 'Створення профілю';
+
+  @override
+  String get firstWorkoutTitle => 'Перша зарядка';
 
   @override
   String get homeHeadline => 'Готові стати\nсильнішими?';
