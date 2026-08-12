@@ -146,6 +146,198 @@ abstract class AppLocalizations {
   /// **'Sign in'**
   String get signInTitle;
 
+  /// No description provided for @signInDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome back. Sign in to continue moving with Lumilu.'**
+  String get signInDescription;
+
+  /// No description provided for @signUpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your account'**
+  String get signUpTitle;
+
+  /// No description provided for @signUpDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A few details and your family’s movement journey can begin.'**
+  String get signUpDescription;
+
+  /// No description provided for @nameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Your name'**
+  String get nameLabel;
+
+  /// No description provided for @emailLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get emailLabel;
+
+  /// No description provided for @passwordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get passwordLabel;
+
+  /// No description provided for @nameValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter at least 2 characters.'**
+  String get nameValidation;
+
+  /// No description provided for @emailValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email address.'**
+  String get emailValidation;
+
+  /// No description provided for @passwordRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your password.'**
+  String get passwordRequired;
+
+  /// No description provided for @passwordValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Use at least 8 characters, one uppercase Latin letter and one number. Latin characters only.'**
+  String get passwordValidation;
+
+  /// No description provided for @showPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Show password'**
+  String get showPassword;
+
+  /// No description provided for @hidePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide password'**
+  String get hidePassword;
+
+  /// No description provided for @signInAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get signInAction;
+
+  /// No description provided for @forgotPasswordAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password?'**
+  String get forgotPasswordAction;
+
+  /// No description provided for @forgotPasswordTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset your password'**
+  String get forgotPasswordTitle;
+
+  /// No description provided for @forgotPasswordDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email and we’ll send you a secure link to choose a new password.'**
+  String get forgotPasswordDescription;
+
+  /// No description provided for @sendResetLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Send reset link'**
+  String get sendResetLink;
+
+  /// No description provided for @passwordResetSentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your inbox'**
+  String get passwordResetSentTitle;
+
+  /// No description provided for @passwordResetSentDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We sent a password reset link to {email}.'**
+  String passwordResetSentDescription(String email);
+
+  /// No description provided for @passwordResetUserNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No account was found for this email.'**
+  String get passwordResetUserNotFound;
+
+  /// No description provided for @backToSignIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to sign in'**
+  String get backToSignIn;
+
+  /// No description provided for @createAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createAccount;
+
+  /// No description provided for @haveAccountPrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get haveAccountPrompt;
+
+  /// No description provided for @noAccountPrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'New to Lumilu?'**
+  String get noAccountPrompt;
+
+  /// No description provided for @authInvalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'This email address is invalid.'**
+  String get authInvalidEmail;
+
+  /// No description provided for @authInvalidCredentials.
+  ///
+  /// In en, this message translates to:
+  /// **'The email or password is incorrect.'**
+  String get authInvalidCredentials;
+
+  /// No description provided for @authEmailInUse.
+  ///
+  /// In en, this message translates to:
+  /// **'An account with this email already exists.'**
+  String get authEmailInUse;
+
+  /// No description provided for @authWeakPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Use at least 8 characters, one uppercase Latin letter and one number.'**
+  String get authWeakPassword;
+
+  /// No description provided for @authUserDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has been disabled.'**
+  String get authUserDisabled;
+
+  /// No description provided for @authNetworkError.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your internet connection and try again.'**
+  String get authNetworkError;
+
+  /// No description provided for @authTooManyRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many attempts. Please try again later.'**
+  String get authTooManyRequests;
+
+  /// No description provided for @authDatabaseError.
+  ///
+  /// In en, this message translates to:
+  /// **'The profile could not be saved. Please try again.'**
+  String get authDatabaseError;
+
   /// No description provided for @quickRegistrationTitle.
   ///
   /// In en, this message translates to:
@@ -194,6 +386,12 @@ abstract class AppLocalizations {
   /// **'Appearance'**
   String get appearanceTitle;
 
+  /// No description provided for @appearanceDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how Lumilu looks on this device.'**
+  String get appearanceDescription;
+
   /// No description provided for @themeSystem.
   ///
   /// In en, this message translates to:
@@ -217,6 +415,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Dark'**
   String get themeDark;
+
+  /// No description provided for @languageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get languageTitle;
+
+  /// No description provided for @languageDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the language used throughout the app.'**
+  String get languageDescription;
+
+  /// No description provided for @languageSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'Device language'**
+  String get languageSystem;
+
+  /// No description provided for @languageSystemDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Follow your device settings'**
+  String get languageSystemDescription;
+
+  /// No description provided for @logoutAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get logoutAction;
 
   /// No description provided for @squatWorkoutTitle.
   ///

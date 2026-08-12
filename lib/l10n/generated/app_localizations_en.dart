@@ -34,6 +34,113 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signInTitle => 'Sign in';
 
   @override
+  String get signInDescription =>
+      'Welcome back. Sign in to continue moving with Lumilu.';
+
+  @override
+  String get signUpTitle => 'Create your account';
+
+  @override
+  String get signUpDescription =>
+      'A few details and your family’s movement journey can begin.';
+
+  @override
+  String get nameLabel => 'Your name';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get passwordLabel => 'Password';
+
+  @override
+  String get nameValidation => 'Enter at least 2 characters.';
+
+  @override
+  String get emailValidation => 'Enter a valid email address.';
+
+  @override
+  String get passwordRequired => 'Enter your password.';
+
+  @override
+  String get passwordValidation =>
+      'Use at least 8 characters, one uppercase Latin letter and one number. Latin characters only.';
+
+  @override
+  String get showPassword => 'Show password';
+
+  @override
+  String get hidePassword => 'Hide password';
+
+  @override
+  String get signInAction => 'Sign in';
+
+  @override
+  String get forgotPasswordAction => 'Forgot password?';
+
+  @override
+  String get forgotPasswordTitle => 'Reset your password';
+
+  @override
+  String get forgotPasswordDescription =>
+      'Enter your email and we’ll send you a secure link to choose a new password.';
+
+  @override
+  String get sendResetLink => 'Send reset link';
+
+  @override
+  String get passwordResetSentTitle => 'Check your inbox';
+
+  @override
+  String passwordResetSentDescription(String email) {
+    return 'We sent a password reset link to $email.';
+  }
+
+  @override
+  String get passwordResetUserNotFound =>
+      'No account was found for this email.';
+
+  @override
+  String get backToSignIn => 'Back to sign in';
+
+  @override
+  String get createAccount => 'Create account';
+
+  @override
+  String get haveAccountPrompt => 'Already have an account?';
+
+  @override
+  String get noAccountPrompt => 'New to Lumilu?';
+
+  @override
+  String get authInvalidEmail => 'This email address is invalid.';
+
+  @override
+  String get authInvalidCredentials => 'The email or password is incorrect.';
+
+  @override
+  String get authEmailInUse => 'An account with this email already exists.';
+
+  @override
+  String get authWeakPassword =>
+      'Use at least 8 characters, one uppercase Latin letter and one number.';
+
+  @override
+  String get authUserDisabled => 'This account has been disabled.';
+
+  @override
+  String get authNetworkError =>
+      'Check your internet connection and try again.';
+
+  @override
+  String get authTooManyRequests =>
+      'Too many attempts. Please try again later.';
+
+  @override
+  String get authDatabaseError =>
+      'The profile could not be saved. Please try again.';
+
+  @override
   String get quickRegistrationTitle => 'Quick registration';
 
   @override
@@ -59,6 +166,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appearanceTitle => 'Appearance';
 
   @override
+  String get appearanceDescription => 'Choose how Lumilu looks on this device.';
+
+  @override
   String get themeSystem => 'System';
 
   @override
@@ -69,6 +179,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get themeDark => 'Dark';
+
+  @override
+  String get languageTitle => 'Language';
+
+  @override
+  String get languageDescription =>
+      'Choose the language used throughout the app.';
+
+  @override
+  String get languageSystem => 'Device language';
+
+  @override
+  String get languageSystemDescription => 'Follow your device settings';
+
+  @override
+  String get logoutAction => 'Log out';
 
   @override
   String get squatWorkoutTitle => 'SQUATS · 5 REPS';

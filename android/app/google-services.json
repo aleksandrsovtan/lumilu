@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165431352368",
+    "project_id": "lumilu-ff782",
+    "storage_bucket": "lumilu-ff782.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165431352368:android:db2285ee847164cd27a1f5",
+        "android_client_info": {
+          "package_name": "com.example.lumilu_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAnqm73B1bVy4a4i76v0Keb7bc0ZLxFuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

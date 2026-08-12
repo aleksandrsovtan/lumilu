@@ -43,7 +43,7 @@ void main() {
     await tester.ensureVisible(find.byKey(const Key('welcome-get-started')));
     await tester.tap(find.byKey(const Key('welcome-get-started')));
     await tester.pumpAndSettle();
-    expect(find.text('Швидка реєстрація'), findsOneWidget);
+    expect(find.text('Створіть акаунт'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.quickRegistration);
 
     router.go(AppRoutes.createProfile);

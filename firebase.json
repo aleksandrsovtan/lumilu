@@ -1,0 +1,34 @@
+{
+  "firestore": {
+    "database": "default",
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "lumilu-ff782",
+          "appId": "1:165431352368:android:db2285ee847164cd27a1f5",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "lumilu-ff782",
+          "appId": "1:165431352368:ios:14e6c2814749565427a1f5",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "lumilu-ff782",
+          "configurations": {
+            "android": "1:165431352368:android:db2285ee847164cd27a1f5",
+            "ios": "1:165431352368:ios:14e6c2814749565427a1f5"
+          }
+        }
+      }
+    }
+  }
+}

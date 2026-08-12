@@ -7,12 +7,14 @@ class LumiluButton extends StatelessWidget {
     required this.label,
     required this.onPressed,
     this.filled = true,
+    this.loading = false,
     super.key,
   });
 
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final bool filled;
+  final bool loading;
 
   @override
   Widget build(BuildContext context) => SizedBox(
@@ -61,24 +63,32 @@ class LumiluButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: InkWell(
-            onTap: onPressed,
+            onTap: loading ? null : onPressed,
             borderRadius: BorderRadius.circular(20),
             splashColor: filled
                 ? LumiluColors.neutral0.withValues(alpha: 0.28)
                 : LumiluColors.yellow500.withValues(alpha: 0.16),
             highlightColor: LumiluColors.twilight900.withValues(alpha: 0.06),
             child: Center(
-              child: Text(
-                label,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: filled
-                      ? LumiluColors.twilight900
-                      : Theme.of(context).brightness == Brightness.dark
-                      ? LumiluColors.yellow500
-                      : LumiluColors.twilight800,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
+              child: loading
+                  ? const SizedBox.square(
+                      dimension: 24,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2.5,
+                        color: LumiluColors.twilight900,
+                      ),
+                    )
+                  : Text(
+                      label,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: filled
+                            ? LumiluColors.twilight900
+                            : Theme.of(context).brightness == Brightness.dark
+                            ? LumiluColors.yellow500
+                            : LumiluColors.twilight800,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
             ),
           ),
         ),

@@ -2,9 +2,14 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'core/di/injection_container.dart';
+import 'core/localization/locale_controller.dart';
 import 'core/di/modules/squat_module.dart';
 import 'core/theme/theme_controller.dart';
 import 'features/achievement/presentation/pages/achievement_screen.dart';
+import 'features/auth/presentation/pages/auth_form_screen.dart';
+import 'features/auth/presentation/pages/forgot_password_screen.dart';
+import 'features/auth/presentation/controllers/auth_session_controller.dart';
+import 'features/auth/domain/repositories/auth_repository.dart';
 import 'features/home/presentation/pages/home_screen.dart';
 import 'features/profile/presentation/pages/profile_settings_screen.dart';
 import 'features/squat/infrastructure/motion/lumilu_camera_preview.dart';
@@ -18,6 +23,7 @@ abstract final class AppRoutes {
   static const home = '/home';
   static const signIn = '/sign-in';
   static const quickRegistration = '/quick-registration';
+  static const forgotPassword = '/forgot-password';
   static const createProfile = '/create-profile';
   static const firstWorkout = '/first-workout';
   static const squat = '/squat';
@@ -30,8 +36,24 @@ typedef SquatRouteBuilder = Widget Function(BuildContext context);
 GoRouter createAppRouter({
   SquatRouteBuilder? squatBuilder,
   ThemeController? themeController,
+  LocaleController? localeController,
+  AuthSessionController? authSessionController,
 }) => GoRouter(
   initialLocation: AppRoutes.welcome,
+  refreshListenable: authSessionController,
+  redirect: (context, state) {
+    if (authSessionController == null) return null;
+    final isAuthenticated = authSessionController.isAuthenticated;
+    final path = state.uri.path;
+    final isAuthRoute =
+        path == AppRoutes.welcome ||
+        path == AppRoutes.signIn ||
+        path == AppRoutes.quickRegistration ||
+        path == AppRoutes.forgotPassword;
+    if (isAuthenticated && isAuthRoute) return AppRoutes.home;
+    if (!isAuthenticated && !isAuthRoute) return AppRoutes.welcome;
+    return null;
+  },
   routes: [
     GoRoute(
       path: AppRoutes.welcome,
@@ -42,13 +64,26 @@ GoRouter createAppRouter({
     ),
     GoRoute(
       path: AppRoutes.signIn,
-      builder: (context, state) =>
-          TitleScreen(title: AppLocalizations.of(context)!.signInTitle),
+      builder: (context, state) => AuthFormScreen(
+        mode: AuthFormMode.signIn,
+        onSuccess: () => context.go(AppRoutes.home),
+        onSwitchMode: () => context.go(AppRoutes.quickRegistration),
+        onForgotPassword: () => context.push(AppRoutes.forgotPassword),
+      ),
+    ),
+    GoRoute(
+      path: AppRoutes.forgotPassword,
+      builder: (context, state) => ForgotPasswordScreen(
+        onSendReset: getIt<AuthRepository>().sendPasswordResetEmail,
+        onBackToSignIn: () => context.go(AppRoutes.signIn),
+      ),
     ),
     GoRoute(
       path: AppRoutes.quickRegistration,
-      builder: (context, state) => TitleScreen(
-        title: AppLocalizations.of(context)!.quickRegistrationTitle,
+      builder: (context, state) => AuthFormScreen(
+        mode: AuthFormMode.signUp,
+        onSuccess: () => context.go(AppRoutes.home),
+        onSwitchMode: () => context.go(AppRoutes.signIn),
       ),
     ),
     GoRoute(
@@ -77,11 +112,17 @@ GoRouter createAppRouter({
       path: AppRoutes.achievement,
       builder: (context, state) => const AchievementScreen(),
     ),
-    if (themeController != null)
+    if (themeController != null && localeController != null)
       GoRoute(
         path: AppRoutes.profileSettings,
-        builder: (context, state) =>
-            ProfileSettingsScreen(themeController: themeController),
+        builder: (context, state) => ProfileSettingsScreen(
+          themeController: themeController,
+          localeController: localeController,
+          onLogout: () async {
+            await getIt<AuthRepository>().signOut();
+            if (context.mounted) context.go(AppRoutes.welcome);
+          },
+        ),
       ),
   ],
   errorBuilder: (context, state) => Directionality(
