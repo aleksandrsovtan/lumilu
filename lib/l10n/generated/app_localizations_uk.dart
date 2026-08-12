@@ -159,6 +159,32 @@ class AppLocalizationsUk extends AppLocalizations {
   String get startSquats => 'Почати присідання';
 
   @override
+  String get todayTab => 'Сьогодні';
+
+  @override
+  String get moveTab => 'Рух';
+
+  @override
+  String get rewardsTab => 'Нагороди';
+
+  @override
+  String get startWorkout => 'Почати тренування';
+
+  @override
+  String get movePlaceholderTitle => 'Обери наступний рух';
+
+  @override
+  String get movePlaceholderDescription =>
+      'Тут з’являться тренування та веселі рухові активності.';
+
+  @override
+  String get rewardsPlaceholderTitle => 'Твої нагороди';
+
+  @override
+  String get rewardsPlaceholderDescription =>
+      'Тут з’являться досягнення та приємні моменти прогресу.';
+
+  @override
   String get profileSettingsTitle => 'Налаштування профілю';
 
   @override

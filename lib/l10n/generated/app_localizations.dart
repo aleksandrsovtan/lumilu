@@ -374,6 +374,54 @@ abstract class AppLocalizations {
   /// **'Start squats'**
   String get startSquats;
 
+  /// No description provided for @todayTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get todayTab;
+
+  /// No description provided for @moveTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Move'**
+  String get moveTab;
+
+  /// No description provided for @rewardsTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Rewards'**
+  String get rewardsTab;
+
+  /// No description provided for @startWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Workout'**
+  String get startWorkout;
+
+  /// No description provided for @movePlaceholderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your next move'**
+  String get movePlaceholderTitle;
+
+  /// No description provided for @movePlaceholderDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Workouts and playful movement activities will live here.'**
+  String get movePlaceholderDescription;
+
+  /// No description provided for @rewardsPlaceholderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your rewards'**
+  String get rewardsPlaceholderTitle;
+
+  /// No description provided for @rewardsPlaceholderDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievements and joyful milestones will appear here.'**
+  String get rewardsPlaceholderDescription;
+
   /// No description provided for @profileSettingsTitle.
   ///
   /// In en, this message translates to:

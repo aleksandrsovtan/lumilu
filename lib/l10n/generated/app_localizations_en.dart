@@ -160,6 +160,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get startSquats => 'Start squats';
 
   @override
+  String get todayTab => 'Today';
+
+  @override
+  String get moveTab => 'Move';
+
+  @override
+  String get rewardsTab => 'Rewards';
+
+  @override
+  String get startWorkout => 'Start Workout';
+
+  @override
+  String get movePlaceholderTitle => 'Choose your next move';
+
+  @override
+  String get movePlaceholderDescription =>
+      'Workouts and playful movement activities will live here.';
+
+  @override
+  String get rewardsPlaceholderTitle => 'Your rewards';
+
+  @override
+  String get rewardsPlaceholderDescription =>
+      'Achievements and joyful milestones will appear here.';
+
+  @override
   String get profileSettingsTitle => 'Profile settings';
 
   @override

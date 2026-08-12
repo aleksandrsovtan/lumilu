@@ -10,17 +10,23 @@ import 'features/auth/presentation/pages/auth_form_screen.dart';
 import 'features/auth/presentation/pages/forgot_password_screen.dart';
 import 'features/auth/presentation/controllers/auth_session_controller.dart';
 import 'features/auth/domain/repositories/auth_repository.dart';
-import 'features/home/presentation/pages/home_screen.dart';
+import 'app/presentation/pages/app_shell_screen.dart';
+import 'features/move/presentation/pages/move_screen.dart';
 import 'features/profile/presentation/pages/profile_settings_screen.dart';
+import 'features/rewards/presentation/pages/rewards_screen.dart';
 import 'features/squat/infrastructure/motion/lumilu_camera_preview.dart';
 import 'features/squat/presentation/pages/squat_screen.dart';
+import 'features/today/presentation/pages/today_screen.dart';
 import 'features/welcome/presentation/pages/welcome_screen.dart';
 import 'l10n/generated/app_localizations.dart';
 import 'shared/presentation/pages/title_screen.dart';
 
 abstract final class AppRoutes {
   static const welcome = '/';
-  static const home = '/home';
+  static const today = '/today';
+  static const move = '/move';
+  static const rewards = '/rewards';
+  static const home = today;
   static const signIn = '/sign-in';
   static const quickRegistration = '/quick-registration';
   static const forgotPassword = '/forgot-password';
@@ -96,12 +102,46 @@ GoRouter createAppRouter({
       builder: (context, state) =>
           TitleScreen(title: AppLocalizations.of(context)!.firstWorkoutTitle),
     ),
-    GoRoute(
-      path: AppRoutes.home,
-      builder: (context, state) => HomeScreen(
-        onStartSquats: () => context.push(AppRoutes.squat),
+    StatefulShellRoute.indexedStack(
+      builder: (context, state, navigationShell) => AppShellScreen(
+        body: navigationShell,
+        selectedIndex: navigationShell.currentIndex,
+        onDestinationSelected: (index) => navigationShell.goBranch(
+          index,
+          initialLocation: index == navigationShell.currentIndex,
+        ),
         onOpenProfile: () => context.push(AppRoutes.profileSettings),
       ),
+      branches: [
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: AppRoutes.today,
+              builder: (context, state) => TodayScreen(
+                onStartWorkout: () => context.push(AppRoutes.squat),
+              ),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: AppRoutes.move,
+              builder: (context, state) => MoveScreen(
+                onStartWorkout: () => context.push(AppRoutes.squat),
+              ),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: AppRoutes.rewards,
+              builder: (context, state) => const RewardsScreen(),
+            ),
+          ],
+        ),
+      ],
     ),
     GoRoute(
       path: AppRoutes.squat,
