@@ -178,6 +178,179 @@ class AppLocalizationsUk extends AppLocalizations {
       'Тут з’являться тренування та веселі рухові активності.';
 
   @override
+  String get moveTitle => 'Обери свій темп';
+
+  @override
+  String get moveDescription =>
+      'Три готові комплекси — або створи той, що пасує саме тобі.';
+
+  @override
+  String get easyStartTitle => 'Легкий старт';
+
+  @override
+  String get easyStartDescription => 'М’яко розімнись і прокинься';
+
+  @override
+  String get easyStartMeta => '~ 5 хв · 4 вправи';
+
+  @override
+  String get inRhythmTitle => 'У ритмі';
+
+  @override
+  String get inRhythmDescription => 'Активний темп і заряд енергії';
+
+  @override
+  String get inRhythmMeta => '~ 10 хв · 7 вправ';
+
+  @override
+  String get fullPowerTitle => 'На повну';
+
+  @override
+  String get fullPowerDescription => 'Справжній виклик для всього тіла';
+
+  @override
+  String get fullPowerMeta => '~ 15 хв · 10 вправ';
+
+  @override
+  String get customWorkoutTitle => 'Свій комплекс';
+
+  @override
+  String get customWorkoutDescription => 'Збери тренування під свій настрій';
+
+  @override
+  String get createWorkoutTitle => 'Новий комплекс';
+
+  @override
+  String get createWorkoutDescription =>
+      'Дай йому назву — вправи додамо наступним кроком.';
+
+  @override
+  String get workoutNameLabel => 'Назва комплексу';
+
+  @override
+  String get createWorkoutAction => 'Створити комплекс';
+
+  @override
+  String get startNow => 'Почати зараз';
+
+  @override
+  String approximateSeconds(int seconds) {
+    return '~ $seconds с';
+  }
+
+  @override
+  String get exerciseBreathingTitle => 'Спокійне дихання';
+
+  @override
+  String get exerciseBreathingDescription =>
+      'Вдихай носом, повільно видихай і розслаб плечі.';
+
+  @override
+  String get exerciseShoulderCirclesTitle => 'Кола плечима';
+
+  @override
+  String get exerciseShoulderCirclesDescription =>
+      'Роби широкі плавні кола плечима вперед і назад.';
+
+  @override
+  String get exerciseSideBendsTitle => 'Нахили в сторони';
+
+  @override
+  String get exerciseSideBendsDescription =>
+      'Тягнися рукою над головою, не повертаючи корпус.';
+
+  @override
+  String get exerciseEasySquatsTitle => 'Легкі присідання';
+
+  @override
+  String get exerciseEasySquatsDescription =>
+      'Відводь таз назад і тримай коліна над стопами.';
+
+  @override
+  String get exerciseMarchTitle => 'Ходьба на місці';
+
+  @override
+  String get exerciseMarchDescription =>
+      'Підіймай коліна та активно працюй руками.';
+
+  @override
+  String get exerciseJumpingJacksTitle => 'Джампінг-джек';
+
+  @override
+  String get exerciseJumpingJacksDescription =>
+      'Стрибай, одночасно розводячи ноги й руки.';
+
+  @override
+  String get exerciseSquatsTitle => 'Присідання';
+
+  @override
+  String get exerciseSquatsDescription =>
+      'Опускайся до комфортної глибини з рівною спиною.';
+
+  @override
+  String get exerciseKneeRaisesTitle => 'Підйоми колін';
+
+  @override
+  String get exerciseKneeRaisesDescription =>
+      'Почергово підтягуй коліна до грудей у темпі.';
+
+  @override
+  String get exerciseLungesTitle => 'Випади';
+
+  @override
+  String get exerciseLungesDescription =>
+      'Крокуй вперед і м’яко опускай заднє коліно.';
+
+  @override
+  String get exercisePlankTitle => 'Планка';
+
+  @override
+  String get exercisePlankDescription =>
+      'Тримай тіло рівною лінією та напружуй живіт.';
+
+  @override
+  String get exerciseMountainClimbersTitle => 'Альпініст';
+
+  @override
+  String get exerciseMountainClimbersDescription =>
+      'У планці почергово підтягай коліна до грудей.';
+
+  @override
+  String get exercisePushUpsTitle => 'Віджимання';
+
+  @override
+  String get exercisePushUpsDescription =>
+      'Опускай груди, зберігаючи корпус прямим.';
+
+  @override
+  String get exerciseJumpSquatsTitle => 'Присідання зі стрибком';
+
+  @override
+  String get exerciseJumpSquatsDescription =>
+      'Вистрибуй із присідання та м’яко приземляйся.';
+
+  @override
+  String get exerciseBurpeesTitle => 'Берпі';
+
+  @override
+  String get exerciseBurpeesDescription =>
+      'Перейди в планку, поверни ноги й вистрибни вгору.';
+
+  @override
+  String get exerciseHighKneesTitle => 'Високі коліна';
+
+  @override
+  String get exerciseHighKneesDescription =>
+      'Біжи на місці, підіймаючи коліна до рівня таза.';
+
+  @override
+  String get exerciseBicycleCrunchesTitle => 'Велосипед';
+
+  @override
+  String get exerciseBicycleCrunchesDescription =>
+      'Почергово тягни лікоть до протилежного коліна.';
+
+  @override
   String get rewardsPlaceholderTitle => 'Твої нагороди';
 
   @override

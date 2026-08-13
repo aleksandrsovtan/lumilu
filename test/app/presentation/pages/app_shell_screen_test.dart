@@ -29,7 +29,7 @@ void main() {
 
     await tester.tap(find.text('Move').last);
     await tester.pumpAndSettle();
-    expect(find.text('Choose your next move'), findsOneWidget);
+    expect(find.text('Choose your pace'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.move);
 
     await tester.tap(find.text('Rewards').last);
@@ -39,7 +39,13 @@ void main() {
 
     await tester.tap(find.text('Move').last);
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('move-start-workout')));
+    await tester.tap(find.byKey(const Key('select-easy-workout')));
+    await tester.pumpAndSettle();
+    expect(find.byIcon(Icons.check_circle_rounded), findsOneWidget);
+    final startButton = find.byKey(const Key('move-start-selected-workout'));
+    await tester.ensureVisible(startButton);
+    await tester.pumpAndSettle();
+    await tester.tap(startButton);
     await tester.pumpAndSettle();
 
     expect(find.text('Fullscreen workout'), findsOneWidget);

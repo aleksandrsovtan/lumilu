@@ -410,6 +410,312 @@ abstract class AppLocalizations {
   /// **'Workouts and playful movement activities will live here.'**
   String get movePlaceholderDescription;
 
+  /// No description provided for @moveTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your pace'**
+  String get moveTitle;
+
+  /// No description provided for @moveDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick one of three ready-made workouts or build one just for you.'**
+  String get moveDescription;
+
+  /// No description provided for @easyStartTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Easy start'**
+  String get easyStartTitle;
+
+  /// No description provided for @easyStartDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Warm up gently and wake up'**
+  String get easyStartDescription;
+
+  /// No description provided for @easyStartMeta.
+  ///
+  /// In en, this message translates to:
+  /// **'~ 5 min · 4 exercises'**
+  String get easyStartMeta;
+
+  /// No description provided for @inRhythmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'In rhythm'**
+  String get inRhythmTitle;
+
+  /// No description provided for @inRhythmDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'An active pace and energy boost'**
+  String get inRhythmDescription;
+
+  /// No description provided for @inRhythmMeta.
+  ///
+  /// In en, this message translates to:
+  /// **'~ 10 min · 7 exercises'**
+  String get inRhythmMeta;
+
+  /// No description provided for @fullPowerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Full power'**
+  String get fullPowerTitle;
+
+  /// No description provided for @fullPowerDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A real challenge for your whole body'**
+  String get fullPowerDescription;
+
+  /// No description provided for @fullPowerMeta.
+  ///
+  /// In en, this message translates to:
+  /// **'~ 15 min · 10 exercises'**
+  String get fullPowerMeta;
+
+  /// No description provided for @customWorkoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom workout'**
+  String get customWorkoutTitle;
+
+  /// No description provided for @customWorkoutDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Build a workout to match your mood'**
+  String get customWorkoutDescription;
+
+  /// No description provided for @createWorkoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New workout'**
+  String get createWorkoutTitle;
+
+  /// No description provided for @createWorkoutDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Give it a name — exercises come in the next step.'**
+  String get createWorkoutDescription;
+
+  /// No description provided for @workoutNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Workout name'**
+  String get workoutNameLabel;
+
+  /// No description provided for @createWorkoutAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Create workout'**
+  String get createWorkoutAction;
+
+  /// No description provided for @startNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Start now'**
+  String get startNow;
+
+  /// No description provided for @approximateSeconds.
+  ///
+  /// In en, this message translates to:
+  /// **'~ {seconds} sec'**
+  String approximateSeconds(int seconds);
+
+  /// No description provided for @exerciseBreathingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Calm breathing'**
+  String get exerciseBreathingTitle;
+
+  /// No description provided for @exerciseBreathingDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Breathe in through your nose, exhale slowly and relax your shoulders.'**
+  String get exerciseBreathingDescription;
+
+  /// No description provided for @exerciseShoulderCirclesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Shoulder circles'**
+  String get exerciseShoulderCirclesTitle;
+
+  /// No description provided for @exerciseShoulderCirclesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Make broad, smooth shoulder circles forward and backward.'**
+  String get exerciseShoulderCirclesDescription;
+
+  /// No description provided for @exerciseSideBendsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Side bends'**
+  String get exerciseSideBendsTitle;
+
+  /// No description provided for @exerciseSideBendsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Reach one arm overhead without rotating your torso.'**
+  String get exerciseSideBendsDescription;
+
+  /// No description provided for @exerciseEasySquatsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Easy squats'**
+  String get exerciseEasySquatsTitle;
+
+  /// No description provided for @exerciseEasySquatsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Push your hips back and keep your knees above your feet.'**
+  String get exerciseEasySquatsDescription;
+
+  /// No description provided for @exerciseMarchTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'March in place'**
+  String get exerciseMarchTitle;
+
+  /// No description provided for @exerciseMarchDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Lift your knees and move your arms with energy.'**
+  String get exerciseMarchDescription;
+
+  /// No description provided for @exerciseJumpingJacksTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Jumping jacks'**
+  String get exerciseJumpingJacksTitle;
+
+  /// No description provided for @exerciseJumpingJacksDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Jump while opening your legs and raising your arms.'**
+  String get exerciseJumpingJacksDescription;
+
+  /// No description provided for @exerciseSquatsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Squats'**
+  String get exerciseSquatsTitle;
+
+  /// No description provided for @exerciseSquatsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Lower to a comfortable depth while keeping your back straight.'**
+  String get exerciseSquatsDescription;
+
+  /// No description provided for @exerciseKneeRaisesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Knee raises'**
+  String get exerciseKneeRaisesTitle;
+
+  /// No description provided for @exerciseKneeRaisesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Alternately drive each knee toward your chest.'**
+  String get exerciseKneeRaisesDescription;
+
+  /// No description provided for @exerciseLungesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Lunges'**
+  String get exerciseLungesTitle;
+
+  /// No description provided for @exerciseLungesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Step forward and gently lower your back knee.'**
+  String get exerciseLungesDescription;
+
+  /// No description provided for @exercisePlankTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Plank'**
+  String get exercisePlankTitle;
+
+  /// No description provided for @exercisePlankDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep your body in one line and brace your core.'**
+  String get exercisePlankDescription;
+
+  /// No description provided for @exerciseMountainClimbersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Mountain climbers'**
+  String get exerciseMountainClimbersTitle;
+
+  /// No description provided for @exerciseMountainClimbersDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'From plank, alternate driving your knees toward your chest.'**
+  String get exerciseMountainClimbersDescription;
+
+  /// No description provided for @exercisePushUpsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Push-ups'**
+  String get exercisePushUpsTitle;
+
+  /// No description provided for @exercisePushUpsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Lower your chest while keeping your body straight.'**
+  String get exercisePushUpsDescription;
+
+  /// No description provided for @exerciseJumpSquatsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Jump squats'**
+  String get exerciseJumpSquatsTitle;
+
+  /// No description provided for @exerciseJumpSquatsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Jump out of the squat and land softly.'**
+  String get exerciseJumpSquatsDescription;
+
+  /// No description provided for @exerciseBurpeesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Burpees'**
+  String get exerciseBurpeesTitle;
+
+  /// No description provided for @exerciseBurpeesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Move to plank, bring your feet back and jump up.'**
+  String get exerciseBurpeesDescription;
+
+  /// No description provided for @exerciseHighKneesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'High knees'**
+  String get exerciseHighKneesTitle;
+
+  /// No description provided for @exerciseHighKneesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Run in place and lift your knees to hip height.'**
+  String get exerciseHighKneesDescription;
+
+  /// No description provided for @exerciseBicycleCrunchesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Bicycle crunches'**
+  String get exerciseBicycleCrunchesTitle;
+
+  /// No description provided for @exerciseBicycleCrunchesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Bring each elbow toward the opposite knee.'**
+  String get exerciseBicycleCrunchesDescription;
+
   /// No description provided for @rewardsPlaceholderTitle.
   ///
   /// In en, this message translates to:
