@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:lumilu_motion/lumilu_motion.dart';
+
 import '../../../../core/errors/app_exception.dart';
 import '../../../../core/errors/app_failure.dart';
 import '../../../../core/functional/either.dart';
@@ -87,6 +89,11 @@ class LumiluMotionDetectionService implements MotionDetectionService {
     CameraPermissionException() => const CameraPermissionFailure(),
     MotionNotSupportedException() => const MotionNotSupportedFailure(),
     MotionException() => MotionFailure(cause: error),
+    LumiluMotionException(code: LumiluMotionErrorCode.cameraPermissionDenied) =>
+      const CameraPermissionFailure(),
+    LumiluMotionException(code: LumiluMotionErrorCode.notSupported) =>
+      const MotionNotSupportedFailure(),
+    LumiluMotionException() => MotionFailure(cause: error),
     _ => UnexpectedFailure(cause: error),
   };
 }

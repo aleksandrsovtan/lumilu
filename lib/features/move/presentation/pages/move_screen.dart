@@ -12,81 +12,37 @@ class MoveScreen extends StatefulWidget {
     WorkoutComplex(
       difficulty: WorkoutComplexDifficulty.easy,
       durationMinutes: 5,
-      exercises: [
-        WorkoutExercise(
-          type: WorkoutExerciseType.breathing,
-          durationSeconds: 45,
-        ),
-        WorkoutExercise(
-          type: WorkoutExerciseType.shoulderCircles,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(
-          type: WorkoutExerciseType.sideBends,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(
-          type: WorkoutExerciseType.easySquats,
-          durationSeconds: 90,
-        ),
-      ],
+      exercises: _exercises,
     ),
     WorkoutComplex(
       difficulty: WorkoutComplexDifficulty.medium,
       durationMinutes: 10,
-      exercises: [
-        WorkoutExercise(type: WorkoutExerciseType.march, durationSeconds: 60),
-        WorkoutExercise(
-          type: WorkoutExerciseType.jumpingJacks,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(type: WorkoutExerciseType.squats, durationSeconds: 90),
-        WorkoutExercise(
-          type: WorkoutExerciseType.kneeRaises,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(type: WorkoutExerciseType.lunges, durationSeconds: 90),
-        WorkoutExercise(type: WorkoutExerciseType.plank, durationSeconds: 45),
-        WorkoutExercise(
-          type: WorkoutExerciseType.mountainClimbers,
-          durationSeconds: 60,
-        ),
-      ],
+      exercises: _exercises,
     ),
     WorkoutComplex(
       difficulty: WorkoutComplexDifficulty.hard,
       durationMinutes: 15,
-      exercises: [
-        WorkoutExercise(
-          type: WorkoutExerciseType.jumpingJacks,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(type: WorkoutExerciseType.squats, durationSeconds: 90),
-        WorkoutExercise(type: WorkoutExerciseType.pushUps, durationSeconds: 60),
-        WorkoutExercise(type: WorkoutExerciseType.lunges, durationSeconds: 90),
-        WorkoutExercise(
-          type: WorkoutExerciseType.mountainClimbers,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(
-          type: WorkoutExerciseType.jumpSquats,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(type: WorkoutExerciseType.plank, durationSeconds: 60),
-        WorkoutExercise(type: WorkoutExerciseType.burpees, durationSeconds: 60),
-        WorkoutExercise(
-          type: WorkoutExerciseType.highKnees,
-          durationSeconds: 60,
-        ),
-        WorkoutExercise(
-          type: WorkoutExerciseType.bicycleCrunches,
-          durationSeconds: 60,
-        ),
-      ],
+      exercises: _exercises,
     ),
   ];
 
-  final VoidCallback onStartWorkout;
+  static const _exercises = [
+    WorkoutExercise(
+      id: 'head_nod',
+      name: 'Head forward and back',
+      targetRepetitions: 5,
+    ),
+    WorkoutExercise(
+      id: 'head_turn',
+      name: 'Head right and left',
+      targetRepetitions: 5,
+    ),
+    WorkoutExercise(id: 'squat', name: 'Squats', targetRepetitions: 5),
+  ];
+
+  /// Supports both the existing zero-argument callback and a callback that
+  /// receives the selected backend-shaped workout.
+  final Function onStartWorkout;
 
   @override
   State<MoveScreen> createState() => _MoveScreenState();
@@ -129,7 +85,16 @@ class _MoveScreenState extends State<MoveScreen> {
             onSelectComplex: _selectComplex,
             onToggleDetails: _toggleDetails,
             onSelectCustom: _selectCustomWorkout,
-            onStart: widget.onStartWorkout,
+            onStart: () {
+              final complex = _selectedComplex;
+              if (complex == null) return;
+              final callback = widget.onStartWorkout;
+              if (callback is ValueChanged<WorkoutComplex>) {
+                callback(complex);
+              } else {
+                (callback as VoidCallback)();
+              }
+            },
           ),
         ],
       ),

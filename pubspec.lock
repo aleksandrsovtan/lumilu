@@ -424,11 +424,9 @@ packages:
   lumilu_motion:
     dependency: "direct main"
     description:
-      path: "."
-      ref: aa153db197e60dd0beea7049eb25502a05dff34d
-      resolved-ref: aa153db197e60dd0beea7049eb25502a05dff34d
-      url: "https://github.com/aleksandrsovtan/lumilu_motion.git"
-    source: git
+      path: "../lumilu_motion"
+      relative: true
+    source: path
     version: "0.0.1"
   matcher:
     dependency: transitive

@@ -8,6 +8,8 @@ void main() {
   testWidgets('opens onboarding routes and completes the workout flow', (
     tester,
   ) async {
+    await tester.binding.setSurfaceSize(const Size(800, 1000));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
     final router = createAppRouter(
       squatBuilder: (context) => Scaffold(
         body: Center(
@@ -24,18 +26,18 @@ void main() {
     await tester.pumpWidget(
       MaterialApp.router(
         routerConfig: router,
-        locale: const Locale('uk'),
+        locale: const Locale('en'),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
       ),
     );
     expect(find.byKey(const Key('welcome-headline')), findsOneWidget);
-    expect(find.text('Почнімо рухатись'), findsOneWidget);
+    expect(find.text('Let’s move'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.welcome);
 
     await tester.tap(find.byKey(const Key('welcome-sign-in')));
     await tester.pumpAndSettle();
-    expect(find.text('Вхід'), findsOneWidget);
+    expect(find.text('Sign in'), findsWidgets);
     expect(router.state.uri.path, AppRoutes.signIn);
 
     router.go(AppRoutes.welcome);
@@ -43,20 +45,20 @@ void main() {
     await tester.ensureVisible(find.byKey(const Key('welcome-get-started')));
     await tester.tap(find.byKey(const Key('welcome-get-started')));
     await tester.pumpAndSettle();
-    expect(find.text('Створіть акаунт'), findsOneWidget);
+    expect(find.text('Create your account'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.quickRegistration);
 
     router.go(AppRoutes.createProfile);
     await tester.pumpAndSettle();
-    expect(find.text('Створення профілю'), findsOneWidget);
+    expect(find.text('Create profile'), findsOneWidget);
 
     router.go(AppRoutes.firstWorkout);
     await tester.pumpAndSettle();
-    expect(find.text('Перша зарядка'), findsOneWidget);
+    expect(find.text('First workout'), findsOneWidget);
 
     router.go(AppRoutes.home);
     await tester.pumpAndSettle();
-    expect(find.text('Готові стати\nсильнішими?'), findsOneWidget);
+    expect(find.text('Ready to get\nstronger?'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.home);
 
     await tester.tap(find.byKey(const Key('start-squats')));
@@ -66,7 +68,7 @@ void main() {
 
     await tester.tap(find.byKey(const Key('complete-workout')));
     await tester.pumpAndSettle();
-    expect(find.text('Чудова робота!'), findsOneWidget);
+    expect(find.text('Great job!'), findsOneWidget);
     expect(router.state.uri.path, AppRoutes.achievement);
   });
 }

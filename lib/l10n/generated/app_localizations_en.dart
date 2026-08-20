@@ -169,7 +169,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rewardsTab => 'Rewards';
 
   @override
-  String get startWorkout => 'Start Workout';
+  String get startWorkout => 'Start exercises';
 
   @override
   String get movePlaceholderTitle => 'Choose your next move';
@@ -192,7 +192,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get easyStartDescription => 'Warm up gently and wake up';
 
   @override
-  String get easyStartMeta => '~ 5 min · 4 exercises';
+  String get easyStartMeta => '~ 5 min · 3 exercises';
 
   @override
   String get inRhythmTitle => 'In rhythm';
@@ -201,7 +201,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get inRhythmDescription => 'An active pace and energy boost';
 
   @override
-  String get inRhythmMeta => '~ 10 min · 7 exercises';
+  String get inRhythmMeta => '~ 10 min · 3 exercises';
 
   @override
   String get fullPowerTitle => 'Full power';
@@ -210,7 +210,121 @@ class AppLocalizationsEn extends AppLocalizations {
   String get fullPowerDescription => 'A real challenge for your whole body';
 
   @override
-  String get fullPowerMeta => '~ 15 min · 10 exercises';
+  String get fullPowerMeta => '~ 15 min · 3 exercises';
+
+  @override
+  String get exerciseHeadForwardTitle => 'Head tilt forward';
+
+  @override
+  String get exerciseHeadForwardDescription =>
+      'Gently bring your chin toward your chest, then return to neutral.';
+
+  @override
+  String get exerciseHeadBackTitle => 'Head tilt back';
+
+  @override
+  String get exerciseHeadBackDescription =>
+      'Gently look upward, then return to neutral.';
+
+  @override
+  String get exerciseHeadNodTitle => 'Head forward — back';
+
+  @override
+  String get exerciseHeadNodDescription =>
+      'Tilt your head forward, then back. The repetition counts in the back position.';
+
+  @override
+  String get exerciseHeadTurnTitle => 'Head tilts right — left';
+
+  @override
+  String get exerciseHeadTurnDescription =>
+      'Tilt your ear toward the right shoulder, then the left. Keep your face forward and your torso upright.';
+
+  @override
+  String get workoutGetReadyTitle => 'Let\'s get ready!';
+
+  @override
+  String get workoutCameraSetupDescription =>
+      'Place your phone where Lumi can see your whole body.';
+
+  @override
+  String get workoutFullBodyVisible => 'Full body visible';
+
+  @override
+  String get workoutDistance => 'About 2–3 m away';
+
+  @override
+  String get workoutGoodLighting => 'Good lighting';
+
+  @override
+  String get workoutPrivacy => 'Video is not recorded or saved.';
+
+  @override
+  String get workoutOpenCamera => 'Open camera';
+
+  @override
+  String get workoutBodyVisible => 'Great! Lumi can see you ✨';
+
+  @override
+  String get workoutAlmostInFrame => 'Almost there — step away from the camera';
+
+  @override
+  String get workoutStepAwayFromCamera => 'Step away from the camera';
+
+  @override
+  String get workoutExitTitle => 'End workout?';
+
+  @override
+  String get workoutExitDescription =>
+      'If you close the camera now, your progress in this workout will be lost.';
+
+  @override
+  String get workoutStayAction => 'Keep going';
+
+  @override
+  String get workoutExitAction => 'End workout';
+
+  @override
+  String get workoutAmazing => 'Amazing! ✨';
+
+  @override
+  String get workoutNext => 'Next';
+
+  @override
+  String get workoutSkipRest => 'Skip rest';
+
+  @override
+  String get workoutPaused => 'Workout paused';
+
+  @override
+  String get workoutRestartExercise => 'Restart exercise';
+
+  @override
+  String get workoutKeepGoing => 'Keep going! ✨';
+
+  @override
+  String get headTiltForwardHint => 'Lower your chin a little';
+
+  @override
+  String get headTurnRightHint => 'Tilt your head toward the right shoulder';
+
+  @override
+  String get headTurnLeftHint => 'Now tilt toward the left shoulder';
+
+  @override
+  String get headTiltBackHint => 'Look up a little';
+
+  @override
+  String get workoutCompleteTitle => 'You did it!';
+
+  @override
+  String get workoutMoves => 'moves';
+
+  @override
+  String get workoutExercises => 'exercises';
+
+  @override
+  String get workoutDone => 'Done';
 
   @override
   String get customWorkoutTitle => 'Custom workout';

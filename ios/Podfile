@@ -27,6 +27,8 @@ require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelpe
 
 flutter_ios_podfile_setup
 
+# MediaPipeTasksVision is distributed as a static XCFramework, so the plugin
+# that wraps it must also be linked statically.
 pre_install do |installer|
   Pod::Installer::Xcode::TargetValidator.send(
     :define_method,

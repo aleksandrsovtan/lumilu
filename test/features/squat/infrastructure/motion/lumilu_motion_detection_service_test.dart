@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lumilu/features/squat/infrastructure/motion/lumilu_motion_data_source.dart';
-import 'package:lumilu/features/squat/infrastructure/motion/lumilu_motion_detection_service.dart';
+import 'package:lumilu/features/exercises/infrastructure/motion/lumilu_motion_data_source.dart';
+import 'package:lumilu/features/exercises/infrastructure/motion/lumilu_motion_detection_service.dart';
 import 'package:lumilu_motion/lumilu_motion.dart';
 
 void main() {

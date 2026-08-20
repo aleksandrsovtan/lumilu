@@ -395,7 +395,7 @@ abstract class AppLocalizations {
   /// No description provided for @startWorkout.
   ///
   /// In en, this message translates to:
-  /// **'Start Workout'**
+  /// **'Start exercises'**
   String get startWorkout;
 
   /// No description provided for @movePlaceholderTitle.
@@ -437,7 +437,7 @@ abstract class AppLocalizations {
   /// No description provided for @easyStartMeta.
   ///
   /// In en, this message translates to:
-  /// **'~ 5 min · 4 exercises'**
+  /// **'~ 5 min · 3 exercises'**
   String get easyStartMeta;
 
   /// No description provided for @inRhythmTitle.
@@ -455,7 +455,7 @@ abstract class AppLocalizations {
   /// No description provided for @inRhythmMeta.
   ///
   /// In en, this message translates to:
-  /// **'~ 10 min · 7 exercises'**
+  /// **'~ 10 min · 3 exercises'**
   String get inRhythmMeta;
 
   /// No description provided for @fullPowerTitle.
@@ -473,8 +473,224 @@ abstract class AppLocalizations {
   /// No description provided for @fullPowerMeta.
   ///
   /// In en, this message translates to:
-  /// **'~ 15 min · 10 exercises'**
+  /// **'~ 15 min · 3 exercises'**
   String get fullPowerMeta;
+
+  /// No description provided for @exerciseHeadForwardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Head tilt forward'**
+  String get exerciseHeadForwardTitle;
+
+  /// No description provided for @exerciseHeadForwardDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Gently bring your chin toward your chest, then return to neutral.'**
+  String get exerciseHeadForwardDescription;
+
+  /// No description provided for @exerciseHeadBackTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Head tilt back'**
+  String get exerciseHeadBackTitle;
+
+  /// No description provided for @exerciseHeadBackDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Gently look upward, then return to neutral.'**
+  String get exerciseHeadBackDescription;
+
+  /// No description provided for @exerciseHeadNodTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Head forward — back'**
+  String get exerciseHeadNodTitle;
+
+  /// No description provided for @exerciseHeadNodDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Tilt your head forward, then back. The repetition counts in the back position.'**
+  String get exerciseHeadNodDescription;
+
+  /// No description provided for @exerciseHeadTurnTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Head tilts right — left'**
+  String get exerciseHeadTurnTitle;
+
+  /// No description provided for @exerciseHeadTurnDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Tilt your ear toward the right shoulder, then the left. Keep your face forward and your torso upright.'**
+  String get exerciseHeadTurnDescription;
+
+  /// No description provided for @workoutGetReadyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s get ready!'**
+  String get workoutGetReadyTitle;
+
+  /// No description provided for @workoutCameraSetupDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Place your phone where Lumi can see your whole body.'**
+  String get workoutCameraSetupDescription;
+
+  /// No description provided for @workoutFullBodyVisible.
+  ///
+  /// In en, this message translates to:
+  /// **'Full body visible'**
+  String get workoutFullBodyVisible;
+
+  /// No description provided for @workoutDistance.
+  ///
+  /// In en, this message translates to:
+  /// **'About 2–3 m away'**
+  String get workoutDistance;
+
+  /// No description provided for @workoutGoodLighting.
+  ///
+  /// In en, this message translates to:
+  /// **'Good lighting'**
+  String get workoutGoodLighting;
+
+  /// No description provided for @workoutPrivacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Video is not recorded or saved.'**
+  String get workoutPrivacy;
+
+  /// No description provided for @workoutOpenCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'Open camera'**
+  String get workoutOpenCamera;
+
+  /// No description provided for @workoutBodyVisible.
+  ///
+  /// In en, this message translates to:
+  /// **'Great! Lumi can see you ✨'**
+  String get workoutBodyVisible;
+
+  /// No description provided for @workoutAlmostInFrame.
+  ///
+  /// In en, this message translates to:
+  /// **'Almost there — step away from the camera'**
+  String get workoutAlmostInFrame;
+
+  /// No description provided for @workoutStepAwayFromCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'Step away from the camera'**
+  String get workoutStepAwayFromCamera;
+
+  /// No description provided for @workoutExitTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'End workout?'**
+  String get workoutExitTitle;
+
+  /// No description provided for @workoutExitDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'If you close the camera now, your progress in this workout will be lost.'**
+  String get workoutExitDescription;
+
+  /// No description provided for @workoutStayAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep going'**
+  String get workoutStayAction;
+
+  /// No description provided for @workoutExitAction.
+  ///
+  /// In en, this message translates to:
+  /// **'End workout'**
+  String get workoutExitAction;
+
+  /// No description provided for @workoutAmazing.
+  ///
+  /// In en, this message translates to:
+  /// **'Amazing! ✨'**
+  String get workoutAmazing;
+
+  /// No description provided for @workoutNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get workoutNext;
+
+  /// No description provided for @workoutSkipRest.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip rest'**
+  String get workoutSkipRest;
+
+  /// No description provided for @workoutPaused.
+  ///
+  /// In en, this message translates to:
+  /// **'Workout paused'**
+  String get workoutPaused;
+
+  /// No description provided for @workoutRestartExercise.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart exercise'**
+  String get workoutRestartExercise;
+
+  /// No description provided for @workoutKeepGoing.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep going! ✨'**
+  String get workoutKeepGoing;
+
+  /// No description provided for @headTiltForwardHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Lower your chin a little'**
+  String get headTiltForwardHint;
+
+  /// No description provided for @headTurnRightHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tilt your head toward the right shoulder'**
+  String get headTurnRightHint;
+
+  /// No description provided for @headTurnLeftHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Now tilt toward the left shoulder'**
+  String get headTurnLeftHint;
+
+  /// No description provided for @headTiltBackHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Look up a little'**
+  String get headTiltBackHint;
+
+  /// No description provided for @workoutCompleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You did it!'**
+  String get workoutCompleteTitle;
+
+  /// No description provided for @workoutMoves.
+  ///
+  /// In en, this message translates to:
+  /// **'moves'**
+  String get workoutMoves;
+
+  /// No description provided for @workoutExercises.
+  ///
+  /// In en, this message translates to:
+  /// **'exercises'**
+  String get workoutExercises;
+
+  /// No description provided for @workoutDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get workoutDone;
 
   /// No description provided for @customWorkoutTitle.
   ///

@@ -168,7 +168,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get rewardsTab => 'Нагороди';
 
   @override
-  String get startWorkout => 'Почати тренування';
+  String get startWorkout => 'Почати зарядку';
 
   @override
   String get movePlaceholderTitle => 'Обери наступний рух';
@@ -191,7 +191,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get easyStartDescription => 'М’яко розімнись і прокинься';
 
   @override
-  String get easyStartMeta => '~ 5 хв · 4 вправи';
+  String get easyStartMeta => '~ 5 хв · 3 вправи';
 
   @override
   String get inRhythmTitle => 'У ритмі';
@@ -200,7 +200,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get inRhythmDescription => 'Активний темп і заряд енергії';
 
   @override
-  String get inRhythmMeta => '~ 10 хв · 7 вправ';
+  String get inRhythmMeta => '~ 10 хв · 3 вправи';
 
   @override
   String get fullPowerTitle => 'На повну';
@@ -209,7 +209,121 @@ class AppLocalizationsUk extends AppLocalizations {
   String get fullPowerDescription => 'Справжній виклик для всього тіла';
 
   @override
-  String get fullPowerMeta => '~ 15 хв · 10 вправ';
+  String get fullPowerMeta => '~ 15 хв · 3 вправи';
+
+  @override
+  String get exerciseHeadForwardTitle => 'Нахил голови вперед';
+
+  @override
+  String get exerciseHeadForwardDescription =>
+      'Плавно опусти підборіддя до грудей і повернись у нейтральне положення.';
+
+  @override
+  String get exerciseHeadBackTitle => 'Нахил голови назад';
+
+  @override
+  String get exerciseHeadBackDescription =>
+      'Плавно подивись угору і повернись у нейтральне положення.';
+
+  @override
+  String get exerciseHeadNodTitle => 'Голова вперед — назад';
+
+  @override
+  String get exerciseHeadNodDescription =>
+      'Нахили голову вперед, потім назад. Повтор зараховується у положенні назад.';
+
+  @override
+  String get exerciseHeadTurnTitle => 'Нахили голови вправо — вліво';
+
+  @override
+  String get exerciseHeadTurnDescription =>
+      'Нахили голову вухом до правого плеча, потім до лівого. Не повертай обличчя і не нахиляй корпус.';
+
+  @override
+  String get workoutGetReadyTitle => 'Приготуймось!';
+
+  @override
+  String get workoutCameraSetupDescription =>
+      'Постав телефон так, щоб Lumi бачив тебе повністю.';
+
+  @override
+  String get workoutFullBodyVisible => 'Усе тіло видно';
+
+  @override
+  String get workoutDistance => 'Відстань приблизно 2–3 м';
+
+  @override
+  String get workoutGoodLighting => 'Добре освітлення';
+
+  @override
+  String get workoutPrivacy => 'Відео не записується і не зберігається.';
+
+  @override
+  String get workoutOpenCamera => 'Відкрити камеру';
+
+  @override
+  String get workoutBodyVisible => 'Чудово! Lumi тебе бачить ✨';
+
+  @override
+  String get workoutAlmostInFrame => 'Ще трішки — відійди від камери';
+
+  @override
+  String get workoutStepAwayFromCamera => 'Відійдіть від камери';
+
+  @override
+  String get workoutExitTitle => 'Завершити тренування?';
+
+  @override
+  String get workoutExitDescription =>
+      'Якщо закрити камеру зараз, прогрес цього тренування буде втрачено.';
+
+  @override
+  String get workoutStayAction => 'Продовжити';
+
+  @override
+  String get workoutExitAction => 'Завершити';
+
+  @override
+  String get workoutAmazing => 'Неймовірно! ✨';
+
+  @override
+  String get workoutNext => 'Далі';
+
+  @override
+  String get workoutSkipRest => 'Пропустити відпочинок';
+
+  @override
+  String get workoutPaused => 'Тренування призупинено';
+
+  @override
+  String get workoutRestartExercise => 'Почати вправу знову';
+
+  @override
+  String get workoutKeepGoing => 'Продовжуй! ✨';
+
+  @override
+  String get headTiltForwardHint => 'Опусти підборіддя трохи нижче';
+
+  @override
+  String get headTurnRightHint => 'Нахили голову до правого плеча';
+
+  @override
+  String get headTurnLeftHint => 'Тепер нахили до лівого плеча';
+
+  @override
+  String get headTiltBackHint => 'Поглянь трохи вище';
+
+  @override
+  String get workoutCompleteTitle => 'Ти це зробив!';
+
+  @override
+  String get workoutMoves => 'рухів';
+
+  @override
+  String get workoutExercises => 'вправ';
+
+  @override
+  String get workoutDone => 'Готово';
 
   @override
   String get customWorkoutTitle => 'Свій комплекс';

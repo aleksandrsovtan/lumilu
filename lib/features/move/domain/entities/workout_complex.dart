@@ -1,29 +1,17 @@
 enum WorkoutComplexDifficulty { easy, medium, hard }
 
-enum WorkoutExerciseType {
-  breathing,
-  shoulderCircles,
-  sideBends,
-  easySquats,
-  march,
-  jumpingJacks,
-  squats,
-  kneeRaises,
-  lunges,
-  plank,
-  mountainClimbers,
-  pushUps,
-  jumpSquats,
-  burpees,
-  highKnees,
-  bicycleCrunches,
-}
-
+/// This is the complete exercise payload expected from the backend.
+/// Recognition, hints and movement rules are resolved locally by [id].
 class WorkoutExercise {
-  const WorkoutExercise({required this.type, required this.durationSeconds});
+  const WorkoutExercise({
+    required this.id,
+    required this.name,
+    required this.targetRepetitions,
+  });
 
-  final WorkoutExerciseType type;
-  final int durationSeconds;
+  final String id;
+  final String name;
+  final int targetRepetitions;
 }
 
 class WorkoutComplex {

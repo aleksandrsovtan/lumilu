@@ -96,7 +96,12 @@ void main() {
       'lumi@example.com',
     );
 
-    for (final password in ['short1A', 'lowercase1', 'NoNumber', 'Пароль12A']) {
+    for (final password in [
+      'short1A',
+      'lowercase1',
+      'NoNumber',
+      'Has Space12',
+    ]) {
       await tester.enterText(find.byKey(const Key('auth-password')), password);
       await tester.ensureVisible(find.byKey(const Key('auth-submit')));
       await tester.tap(find.byKey(const Key('auth-submit')));

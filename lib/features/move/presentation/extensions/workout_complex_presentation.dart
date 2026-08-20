@@ -37,47 +37,19 @@ extension WorkoutComplexPresentation on WorkoutComplex {
 }
 
 extension WorkoutExercisePresentation on WorkoutExercise {
-  String title(AppLocalizations l10n) => switch (type) {
-    WorkoutExerciseType.breathing => l10n.exerciseBreathingTitle,
-    WorkoutExerciseType.shoulderCircles => l10n.exerciseShoulderCirclesTitle,
-    WorkoutExerciseType.sideBends => l10n.exerciseSideBendsTitle,
-    WorkoutExerciseType.easySquats => l10n.exerciseEasySquatsTitle,
-    WorkoutExerciseType.march => l10n.exerciseMarchTitle,
-    WorkoutExerciseType.jumpingJacks => l10n.exerciseJumpingJacksTitle,
-    WorkoutExerciseType.squats => l10n.exerciseSquatsTitle,
-    WorkoutExerciseType.kneeRaises => l10n.exerciseKneeRaisesTitle,
-    WorkoutExerciseType.lunges => l10n.exerciseLungesTitle,
-    WorkoutExerciseType.plank => l10n.exercisePlankTitle,
-    WorkoutExerciseType.mountainClimbers => l10n.exerciseMountainClimbersTitle,
-    WorkoutExerciseType.pushUps => l10n.exercisePushUpsTitle,
-    WorkoutExerciseType.jumpSquats => l10n.exerciseJumpSquatsTitle,
-    WorkoutExerciseType.burpees => l10n.exerciseBurpeesTitle,
-    WorkoutExerciseType.highKnees => l10n.exerciseHighKneesTitle,
-    WorkoutExerciseType.bicycleCrunches => l10n.exerciseBicycleCrunchesTitle,
+  String title(AppLocalizations l10n) => switch (id) {
+    'head_nod' => l10n.exerciseHeadNodTitle,
+    'head_turn' => l10n.exerciseHeadTurnTitle,
+    'squat' => l10n.exerciseSquatsTitle,
+    _ => name,
   };
 
-  String description(AppLocalizations l10n) => switch (type) {
-    WorkoutExerciseType.breathing => l10n.exerciseBreathingDescription,
-    WorkoutExerciseType.shoulderCircles =>
-      l10n.exerciseShoulderCirclesDescription,
-    WorkoutExerciseType.sideBends => l10n.exerciseSideBendsDescription,
-    WorkoutExerciseType.easySquats => l10n.exerciseEasySquatsDescription,
-    WorkoutExerciseType.march => l10n.exerciseMarchDescription,
-    WorkoutExerciseType.jumpingJacks => l10n.exerciseJumpingJacksDescription,
-    WorkoutExerciseType.squats => l10n.exerciseSquatsDescription,
-    WorkoutExerciseType.kneeRaises => l10n.exerciseKneeRaisesDescription,
-    WorkoutExerciseType.lunges => l10n.exerciseLungesDescription,
-    WorkoutExerciseType.plank => l10n.exercisePlankDescription,
-    WorkoutExerciseType.mountainClimbers =>
-      l10n.exerciseMountainClimbersDescription,
-    WorkoutExerciseType.pushUps => l10n.exercisePushUpsDescription,
-    WorkoutExerciseType.jumpSquats => l10n.exerciseJumpSquatsDescription,
-    WorkoutExerciseType.burpees => l10n.exerciseBurpeesDescription,
-    WorkoutExerciseType.highKnees => l10n.exerciseHighKneesDescription,
-    WorkoutExerciseType.bicycleCrunches =>
-      l10n.exerciseBicycleCrunchesDescription,
+  String description(AppLocalizations l10n) => switch (id) {
+    'head_nod' => l10n.exerciseHeadNodDescription,
+    'head_turn' => l10n.exerciseHeadTurnDescription,
+    'squat' => l10n.exerciseSquatsDescription,
+    _ => name,
   };
 
-  String duration(AppLocalizations l10n) =>
-      l10n.approximateSeconds(durationSeconds);
+  String duration(AppLocalizations l10n) => '$targetRepetitions ×';
 }

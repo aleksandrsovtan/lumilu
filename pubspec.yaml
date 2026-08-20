@@ -23,9 +23,7 @@ dependencies:
   shared_preferences: ^2.5.3
 
   lumilu_motion:
-    git:
-      url: https://github.com/aleksandrsovtan/lumilu_motion.git
-      ref: aa153db197e60dd0beea7049eb25502a05dff34d
+    path: ../lumilu_motion
 
   flutter_localizations:
     sdk: flutter
@@ -40,6 +38,8 @@ dev_dependencies:
   bloc_test: ^10.0.0
 
 flutter:
+  config:
+    enable-lldb-debugging: false
   generate: true
   uses-material-design: true
   assets:

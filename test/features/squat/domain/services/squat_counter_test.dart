@@ -1,9 +1,9 @@
 import 'dart:math' as math;
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lumilu/features/squat/domain/entities/pose_frame_entity.dart';
-import 'package:lumilu/features/squat/domain/entities/squat_session.dart';
-import 'package:lumilu/features/squat/domain/services/squat_counter.dart';
+import 'package:lumilu/features/exercises/domain/entities/pose_frame_entity.dart';
+import 'package:lumilu/features/exercises/domain/entities/squat_session.dart';
+import 'package:lumilu/features/exercises/domain/services/squat_counter.dart';
 
 void main() {
   test('counts a stable down-to-standing transition', () {

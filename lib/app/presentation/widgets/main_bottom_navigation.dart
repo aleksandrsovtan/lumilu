@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../l10n/generated/app_localizations.dart';
 
 class MainBottomNavigation extends StatelessWidget {
-  const MainBottomNavigation({required this.selectedIndex, required this.onDestinationSelected, super.key});
+  const MainBottomNavigation({
+    required this.selectedIndex,
+    required this.onDestinationSelected,
+    super.key,
+  });
 
   final int selectedIndex;
   final ValueChanged<int> onDestinationSelected;

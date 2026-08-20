@@ -122,7 +122,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                         key: const Key('language-uk'),
                         value: 'uk',
                         icon: Icons.translate_rounded,
-                        title: 'Українська',
+                        title: 'Ukrainian',
                       ),
                       const Divider(height: 1),
                       _SettingOption(

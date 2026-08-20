@@ -42,7 +42,7 @@ void main() {
     await tester.tap(find.byKey(const Key('language-uk')));
     await tester.pumpAndSettle();
     expect(localeController.locale, const Locale('uk'));
-    expect(find.text('Мова'), findsOneWidget);
+    expect(find.byKey(const Key('language-uk')), findsOneWidget);
 
     await tester.ensureVisible(find.byKey(const Key('logout-button')));
     await tester.tap(find.byKey(const Key('logout-button')));

@@ -6,18 +6,18 @@ import 'package:lumilu/core/errors/app_failure.dart';
 import 'package:lumilu/core/functional/either.dart';
 import 'package:lumilu/core/functional/unit.dart';
 import 'package:lumilu/core/result/result.dart';
-import 'package:lumilu/features/squat/domain/entities/pose_frame_entity.dart';
-import 'package:lumilu/features/squat/domain/entities/squat_session.dart';
-import 'package:lumilu/features/squat/domain/services/motion_detection_service.dart';
-import 'package:lumilu/features/squat/domain/services/squat_counter.dart';
-import 'package:lumilu/features/squat/domain/usecases/observe_pose_frames.dart';
-import 'package:lumilu/features/squat/domain/usecases/dispose_squat_workout.dart';
-import 'package:lumilu/features/squat/domain/usecases/pause_squat_workout.dart';
-import 'package:lumilu/features/squat/domain/usecases/process_squat_frame.dart';
-import 'package:lumilu/features/squat/domain/usecases/start_squat_workout.dart';
-import 'package:lumilu/features/squat/domain/usecases/switch_workout_camera.dart';
-import 'package:lumilu/features/squat/presentation/cubit/squat_cubit.dart';
-import 'package:lumilu/features/squat/presentation/cubit/squat_state.dart';
+import 'package:lumilu/features/exercises/domain/entities/pose_frame_entity.dart';
+import 'package:lumilu/features/exercises/domain/entities/squat_session.dart';
+import 'package:lumilu/features/exercises/domain/services/motion_detection_service.dart';
+import 'package:lumilu/features/exercises/domain/services/squat_counter.dart';
+import 'package:lumilu/features/exercises/domain/usecases/observe_pose_frames.dart';
+import 'package:lumilu/features/exercises/domain/usecases/dispose_squat_workout.dart';
+import 'package:lumilu/features/exercises/domain/usecases/pause_squat_workout.dart';
+import 'package:lumilu/features/exercises/domain/usecases/process_squat_frame.dart';
+import 'package:lumilu/features/exercises/domain/usecases/start_squat_workout.dart';
+import 'package:lumilu/features/exercises/domain/usecases/switch_workout_camera.dart';
+import 'package:lumilu/features/exercises/presentation/cubit/squat_cubit.dart';
+import 'package:lumilu/features/exercises/presentation/cubit/squat_state.dart';
 
 void main() {
   blocTest<SquatCubit, SquatState>(
