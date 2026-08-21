@@ -14,7 +14,7 @@ import 'app/presentation/pages/app_shell_screen.dart';
 import 'features/move/presentation/pages/move_screen.dart';
 import 'features/move/domain/entities/workout_complex.dart';
 import 'features/profile/presentation/pages/profile_settings_screen.dart';
-import 'features/rewards/presentation/pages/rewards_screen.dart';
+import 'features/lumi/presentation/pages/lumi_screen.dart';
 import 'features/exercises/infrastructure/motion/lumilu_camera_preview.dart';
 import 'features/exercises/presentation/pages/squat_screen.dart';
 import 'features/exercises/presentation/pages/workout_preview_screen.dart';
@@ -29,7 +29,7 @@ abstract final class AppRoutes {
   static const welcome = '/';
   static const today = '/today';
   static const move = '/move';
-  static const rewards = '/rewards';
+  static const lumi = '/lumi';
   static const home = today;
   static const signIn = '/sign-in';
   static const quickRegistration = '/quick-registration';
@@ -147,8 +147,8 @@ GoRouter createAppRouter({
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: AppRoutes.rewards,
-              builder: (context, state) => const RewardsScreen(),
+              path: AppRoutes.lumi,
+              builder: (context, state) => const LumiScreen(),
             ),
           ],
         ),

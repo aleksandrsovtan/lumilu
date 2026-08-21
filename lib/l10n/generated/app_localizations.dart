@@ -389,7 +389,7 @@ abstract class AppLocalizations {
   /// No description provided for @rewardsTab.
   ///
   /// In en, this message translates to:
-  /// **'Rewards'**
+  /// **'Lumi'**
   String get rewardsTab;
 
   /// No description provided for @startWorkout.

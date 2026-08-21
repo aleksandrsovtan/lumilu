@@ -74,10 +74,12 @@ void main() {
 
     await tester.ensureVisible(find.byKey(const Key('move-custom-workout')));
     await tester.tap(
-      find.descendant(
-        of: find.byKey(const Key('move-custom-workout')),
-        matching: find.byType(InkWell),
-      ),
+      find
+          .descendant(
+            of: find.byKey(const Key('move-custom-workout')),
+            matching: find.byType(GestureDetector),
+          )
+          .first,
     );
     await tester.pumpAndSettle();
     await tester.enterText(
@@ -122,13 +124,13 @@ void main() {
     expect(find.byIcon(Icons.check_circle_rounded), findsOneWidget);
 
     await tester.tap(
-      find.descendant(of: card, matching: find.byType(InkWell)).first,
+      find.descendant(of: card, matching: find.byType(GestureDetector)).first,
     );
     await tester.pumpAndSettle();
     expect(tester.getSize(card).height, greaterThan(selectedHeight));
 
     await tester.tap(
-      find.descendant(of: card, matching: find.byType(InkWell)).first,
+      find.descendant(of: card, matching: find.byType(GestureDetector)).first,
     );
     await tester.pumpAndSettle();
     expect(tester.getSize(card).height, selectedHeight);

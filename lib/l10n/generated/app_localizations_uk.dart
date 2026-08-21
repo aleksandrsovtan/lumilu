@@ -165,7 +165,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get moveTab => 'Рух';
 
   @override
-  String get rewardsTab => 'Нагороди';
+  String get rewardsTab => 'Lumi';
 
   @override
   String get startWorkout => 'Почати зарядку';

@@ -166,7 +166,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get moveTab => 'Move';
 
   @override
-  String get rewardsTab => 'Rewards';
+  String get rewardsTab => 'Lumi';
 
   @override
   String get startWorkout => 'Start exercises';

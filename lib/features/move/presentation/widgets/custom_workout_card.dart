@@ -32,8 +32,9 @@ class CustomWorkoutCard extends StatelessWidget {
             : BorderSide.none,
       ),
       clipBehavior: Clip.antiAlias,
-      child: InkWell(
+      child: GestureDetector(
         onTap: onTap,
+        behavior: HitTestBehavior.opaque,
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Align(

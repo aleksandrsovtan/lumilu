@@ -44,5 +44,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/
+    - assets/icons/nav_bar/
+    - assets/icons/lumi_tab/
     - assets/images/
+    - assets/images/lumi_tab/
+    - assets/images/lumi_tab/body/
+    - assets/images/lumi_tab/head/
     - assets/translations/

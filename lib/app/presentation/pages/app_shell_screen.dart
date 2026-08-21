@@ -23,7 +23,7 @@ class AppShellScreen extends StatelessWidget {
       bottom: false,
       child: Column(
         children: [
-          MainHeader(onOpenProfile: onOpenProfile),
+          if (selectedIndex == 0) MainHeader(onOpenProfile: onOpenProfile),
           Expanded(child: body),
         ],
       ),

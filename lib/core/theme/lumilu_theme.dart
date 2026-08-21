@@ -17,6 +17,20 @@ abstract final class LumiluColors {
   static const lilac400 = Color(0xFFB7B2FF);
   static const lilac500 = Color(0xFF958DEC);
   static const lilac600 = Color(0xFF756ACF);
+  static const violet600 = Color(0xFF7447F5);
+  static const lightCanvas = Color(0xFFFAF9FC);
+  static const lightSurfaceContainer = Color(0xFFFDFCFF);
+  static const lightOutline = Color(0xFFDCD9E6);
+  static const lightOutlineVariant = Color(0xFFECE9F2);
+  static const lightText = Color(0xFF17142F);
+  static const lightTextMuted = Color(0xFF66647E);
+  static const darkCanvas = Color(0xFF070619);
+  static const darkSurface = Color(0xFF11102A);
+  static const darkSurfaceContainer = Color(0xFF17152F);
+  static const darkOutline = Color(0xFF302C50);
+  static const darkOutlineVariant = Color(0xFF24213F);
+  static const darkText = Color(0xFFF8F7FC);
+  static const darkTextMuted = Color(0xFFA7A2C8);
   static const neutral0 = Color(0xFFFFFFFF);
   static const neutral50 = Color(0xFFFBFAF8);
   static const neutral100 = Color(0xFFF7F6F2);
@@ -30,32 +44,32 @@ abstract final class LumiluColors {
 abstract final class LumiluTheme {
   static ThemeData get light => _build(
     brightness: Brightness.light,
-    canvas: LumiluColors.neutral300,
+    canvas: LumiluColors.lightCanvas,
     surface: LumiluColors.neutral0,
-    surfaceContainer: LumiluColors.neutral50,
-    primary: LumiluColors.twilight800,
+    surfaceContainer: LumiluColors.lightSurfaceContainer,
+    primary: LumiluColors.violet600,
     onPrimary: LumiluColors.neutral0,
     secondary: LumiluColors.mint400,
-    onSecondary: LumiluColors.twilight800,
-    outline: LumiluColors.neutral300,
-    outlineVariant: LumiluColors.neutral200,
-    onSurface: LumiluColors.twilight800,
-    onSurfaceVariant: LumiluColors.neutral600,
+    onSecondary: LumiluColors.lightText,
+    outline: LumiluColors.lightOutline,
+    outlineVariant: LumiluColors.lightOutlineVariant,
+    onSurface: LumiluColors.lightText,
+    onSurfaceVariant: LumiluColors.lightTextMuted,
   );
 
   static ThemeData get dark => _build(
     brightness: Brightness.dark,
-    canvas: LumiluColors.twilight900,
-    surface: LumiluColors.twilight800,
-    surfaceContainer: LumiluColors.twilight700,
+    canvas: LumiluColors.darkCanvas,
+    surface: LumiluColors.darkSurface,
+    surfaceContainer: LumiluColors.darkSurfaceContainer,
     primary: LumiluColors.yellow500,
-    onPrimary: LumiluColors.twilight900,
+    onPrimary: LumiluColors.darkCanvas,
     secondary: LumiluColors.mint400,
-    onSecondary: LumiluColors.twilight900,
-    outline: LumiluColors.twilight600,
-    outlineVariant: LumiluColors.twilight700,
-    onSurface: LumiluColors.neutral0,
-    onSurfaceVariant: LumiluColors.twilight300,
+    onSecondary: LumiluColors.darkCanvas,
+    outline: LumiluColors.darkOutline,
+    outlineVariant: LumiluColors.darkOutlineVariant,
+    onSurface: LumiluColors.darkText,
+    onSurfaceVariant: LumiluColors.darkTextMuted,
   );
 
   static ThemeData _build({
@@ -111,6 +125,9 @@ abstract final class LumiluTheme {
     );
     return base.copyWith(
       scaffoldBackgroundColor: canvas,
+      splashFactory: NoSplash.splashFactory,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
       textTheme: textTheme,
       appBarTheme: AppBarTheme(
         backgroundColor: canvas,
@@ -135,9 +152,7 @@ abstract final class LumiluTheme {
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: surface,
         elevation: 0,
-        indicatorColor: brightness == Brightness.light
-            ? LumiluColors.mint50
-            : LumiluColors.twilight600,
+        indicatorColor: Colors.transparent,
         indicatorShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(18),
         ),
@@ -152,7 +167,7 @@ abstract final class LumiluTheme {
         labelTextStyle: WidgetStateProperty.resolveWith(
           (states) => textTheme.labelMedium?.copyWith(
             color: states.contains(WidgetState.selected)
-                ? onSurface
+                ? primary
                 : onSurfaceVariant,
             fontWeight: states.contains(WidgetState.selected)
                 ? FontWeight.w700

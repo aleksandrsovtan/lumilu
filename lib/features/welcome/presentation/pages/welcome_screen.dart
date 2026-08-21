@@ -124,10 +124,10 @@ class WelcomeScreen extends StatelessWidget {
                         const SizedBox(height: 18),
                         Semantics(
                           button: true,
-                          child: InkWell(
+                          child: GestureDetector(
                             key: const Key('welcome-sign-in'),
                             onTap: onSignIn,
-                            borderRadius: BorderRadius.circular(12),
+                            behavior: HitTestBehavior.opaque,
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 8,
