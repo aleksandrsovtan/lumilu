@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../models/lumi_body.dart';
+import '../models/lumi_clothing.dart';
 import '../models/lumi_customization_tab.dart';
 import '../models/lumi_hat.dart';
 import 'lumi_state.dart';
@@ -21,5 +22,10 @@ final class LumiCubit extends Cubit<LumiState> {
   void selectHat(LumiHat? hat) {
     if (state.selectedHat == hat) return;
     emit(state.copyWith(selectedHat: hat));
+  }
+
+  void selectClothing(LumiClothing? clothing) {
+    if (state.selectedClothing == clothing) return;
+    emit(state.copyWith(selectedClothing: clothing));
   }
 }

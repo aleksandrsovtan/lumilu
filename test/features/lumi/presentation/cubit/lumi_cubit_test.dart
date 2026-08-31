@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:lumilu/features/lumi/presentation/cubit/lumi_cubit.dart';
 import 'package:lumilu/features/lumi/presentation/cubit/lumi_state.dart';
 import 'package:lumilu/features/lumi/presentation/models/lumi_body.dart';
+import 'package:lumilu/features/lumi/presentation/models/lumi_clothing.dart';
 import 'package:lumilu/features/lumi/presentation/models/lumi_customization_tab.dart';
 import 'package:lumilu/features/lumi/presentation/models/lumi_hat.dart';
 
@@ -25,21 +26,21 @@ void main() {
     blocTest<LumiCubit, LumiState>(
       'selects a Lumi body',
       build: LumiCubit.new,
-      act: (cubit) => cubit.selectBody(LumiBody.placeholder),
-      expect: () => const [LumiState(selectedBody: LumiBody.placeholder)],
+      act: (cubit) => cubit.selectBody(LumiBody.ocean),
+      expect: () => const [LumiState(selectedBody: LumiBody.ocean)],
     );
 
     blocTest<LumiCubit, LumiState>(
       'selects a hat',
       build: LumiCubit.new,
-      act: (cubit) => cubit.selectHat(LumiHat.capybara),
-      expect: () => const [LumiState(selectedHat: LumiHat.capybara)],
+      act: (cubit) => cubit.selectHat(LumiHat.mystery),
+      expect: () => const [LumiState(selectedHat: LumiHat.mystery)],
     );
 
     blocTest<LumiCubit, LumiState>(
       'clears the selected hat',
       build: LumiCubit.new,
-      seed: () => const LumiState(selectedHat: LumiHat.baseHat),
+      seed: () => const LumiState(selectedHat: LumiHat.mystery),
       act: (cubit) => cubit.selectHat(null),
       expect: () => const [LumiState()],
     );
@@ -47,9 +48,24 @@ void main() {
     blocTest<LumiCubit, LumiState>(
       'does not emit when the same hat is selected again',
       build: LumiCubit.new,
-      seed: () => const LumiState(selectedHat: LumiHat.baseHat),
-      act: (cubit) => cubit.selectHat(LumiHat.baseHat),
+      seed: () => const LumiState(selectedHat: LumiHat.mystery),
+      act: (cubit) => cubit.selectHat(LumiHat.mystery),
       expect: () => const <LumiState>[],
+    );
+
+    blocTest<LumiCubit, LumiState>(
+      'selects clothing',
+      build: LumiCubit.new,
+      act: (cubit) => cubit.selectClothing(LumiClothing.ocean),
+      expect: () => const [LumiState(selectedClothing: LumiClothing.ocean)],
+    );
+
+    blocTest<LumiCubit, LumiState>(
+      'clears the selected clothing',
+      build: LumiCubit.new,
+      seed: () => const LumiState(selectedClothing: LumiClothing.premium),
+      act: (cubit) => cubit.selectClothing(null),
+      expect: () => const [LumiState()],
     );
   });
 }
